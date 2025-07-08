@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
-    "title": "MkSaaS - The Best AI SaaS Boilerplate",
-    "description": "MkSaaS is the best AI SaaS boilerplate. Make AI SaaS in days, simply and effortlessly"
+    "name": "AI Tryon",
+    "title": "AI Tryon - Revolutionary AI-Powered Virtual Try-On Experience",
+    "description": "AI Tryon is the ultimate AI-powered virtual try-on platform. Upload your photo and clothing images to see how they look on you instantly with advanced AI generation technology."
   },
   "Common": {
     "login": "Log in",
@@ -32,8 +32,8 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Choose the plan that works best for you",
-    "subtitle": "Choose the plan that works best for you",
+    "description": "Choose the perfect try-on plan for your needs",
+    "subtitle": "Choose the perfect try-on plan for your needs",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "PricingCard": {
@@ -57,32 +57,32 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Basic features for personal use",
+      "description": "Basic try-on features for personal use",
       "features": {
-        "feature-1": "Up to 3 projects",
-        "feature-2": "1 GB storage",
-        "feature-3": "Basic analytics",
+        "feature-1": "5 try-on attempts per day",
+        "feature-2": "Standard resolution results",
+        "feature-3": "Basic clothing types",
         "feature-4": "Community support"
       },
       "limits": {
-        "limit-1": "Custom domains",
-        "limit-2": "Custom branding",
-        "limit-3": "Lifetime updates"
+        "limit-1": "High-resolution results",
+        "limit-2": "Priority processing",
+        "limit-3": "Advanced AI features"
       }
     },
     "pro": {
       "name": "Pro",
-      "description": "Advanced features for professionals",
+      "description": "Advanced features for fashion enthusiasts",
       "features": {
-        "feature-1": "Unlimited projects",
-        "feature-2": "10 GB storage",
-        "feature-3": "Advanced analytics",
+        "feature-1": "Unlimited try-on attempts",
+        "feature-2": "High-resolution results",
+        "feature-3": "All clothing types",
         "feature-4": "Priority support",
-        "feature-5": "Custom domains"
+        "feature-5": "Advanced AI features"
       },
       "limits": {
-        "limit-1": "Custom branding",
-        "limit-2": "Lifetime updates"
+        "limit-1": "Bulk processing",
+        "limit-2": "API access"
       }
     },
     "lifetime": {
@@ -90,11 +90,11 @@
       "description": "Premium features with one-time payment",
       "features": {
         "feature-1": "All Pro features",
-        "feature-2": "100 GB storage",
+        "feature-2": "Bulk processing",
         "feature-3": "Dedicated support",
-        "feature-4": "Enterprise-grade security",
-        "feature-5": "Advanced integrations",
-        "feature-6": "Custom branding",
+        "feature-4": "API access",
+        "feature-5": "Custom integrations",
+        "feature-6": "Priority processing",
         "feature-7": "Lifetime updates"
       }
     }
@@ -117,6 +117,30 @@
     "introduction": "👋 Hi there! This is MkSaaS, an AI SaaS template built with modern technologies, helping you build your SaaS faster and better. If you have any questions, welcome to contact me.",
     "talkWithMe": "Talk with me",
     "followMe": "Follow me on X"
+  },
+  "OutfitPage": {
+    "title": "AI Virtual Try-On",
+    "description": "Explore our AI virtual try-on features and experience revolutionary fitting",
+    "subtitle": "Choose the outfit style that works best for you",
+    "filters": {
+      "all": "All",
+      "male": "Male",
+      "female": "Female"
+    },
+    "card": {
+      "tryOn": "Try On",
+      "buyNow": "Buy Now"
+    },
+    "carousel": {
+      "top": "Top",
+      "bottom": "Bottom"
+    },
+    "emptyState": "No matching outfit styles found",
+    "item": "item",
+    "items": "items",
+    "viewOutfit": "View Outfit",
+    "outfitDetails": "Outfit Details",
+    "outfitDesc": "Experience the future of fashion with our AI virtual try-on platform"
   },
   "ChangelogPage": {
     "title": "Changelog",
@@ -268,6 +292,9 @@
       },
       "pricing": {
         "title": "Pricing"
+      },
+      "outfit": {
+        "title": "Outfit"
       },
       "blog": {
         "title": "Blog"
@@ -437,7 +464,7 @@
   },
   "Dashboard": {
     "dashboard": {
-      "title": "Dashboard"
+      "title": "History"
     },
     "admin": {
       "title": "Admin",
@@ -615,6 +642,37 @@
       "title": "Upgrade",
       "description": "Upgrade to Pro to access all features",
       "button": "Upgrade"
+    },
+    "outfitHistory": {
+      "title": "AI Outfit History",
+      "resultTitle": "Outfit Result",
+      "originalPerson": "Original Person",
+      "topGarment": "Top Garment",
+      "bottomGarment": "Bottom Garment",
+      "result": "Result",
+      "noResult": "No Result",
+      "download": "Download",
+      "downloading": "Downloading...",
+      "status": {
+        "succeeded": "Succeeded",
+        "failed": "Failed",
+        "running": "Running",
+        "pending": "Pending"
+      },
+      "filters": {
+        "all": "All",
+        "today": "Today",
+        "week": "Last 7 Days",
+        "month": "Last 30 Days",
+        "custom": "Custom Date"
+      },
+      "searchPlaceholder": "Search by task ID or status...",
+      "totalResults": "Found",
+      "results": "results",
+      "page": "Page",
+      "previous": "Previous",
+      "next": "Next",
+      "noResults": "No history records"
     }
   },
   "Mail": {
@@ -646,269 +704,319 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
+    "title": "AI Tryon",
+    "description": "Experience the future of virtual try-on with AI-powered technology",
     "hero": {
-      "title": "Make AI SaaS in days, simply and effortlessly",
-      "description": "The is a demo website built with MkSaaS, a Next.js SaaS boilerplate to help you build your AI SaaS faster and better.",
-      "introduction": "Introducing MkSaaS Boilerplate",
-      "primary": "Get Started",
-      "secondary": "See Demo"
+      "title": "Try Clothes Virtually with AI-Powered Technology",
+      "description": "AI Tryon revolutionizes online shopping by allowing you to see how clothes look on you instantly. Upload your photo and clothing images to generate realistic try-on results using advanced AI generation technology.",
+      "introduction": "Introducing AI Tryon",
+      "primary": "Try It Now",
+      "secondary": "View Demo"
     },
     "logocloud": {
-      "title": "Your favorite companies are our partners"
+      "title": "Trusted by leading fashion brands worldwide"
     },
     "integration": {
-      "title": "Integrations",
-      "subtitle": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
+      "title": "AI Technologies",
+      "subtitle": "Powered by cutting-edge AI models",
+      "description": "Our platform leverages the most advanced AI technologies to deliver realistic and accurate virtual try-on experiences.",
       "learnMore": "Learn More",
       "items": {
         "item-1": {
-          "title": "Google Gemini",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Stable Diffusion",
+          "description": "Advanced image generation technology for realistic clothing visualization and seamless integration."
         },
         "item-2": {
-          "title": "Replit",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Computer Vision",
+          "description": "Precise body detection and pose estimation for accurate clothing placement and fitting."
         },
         "item-3": {
-          "title": "MagicUI",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Deep Learning",
+          "description": "Neural networks trained on millions of fashion images for superior try-on accuracy."
         },
         "item-4": {
-          "title": "VSCodium",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Image Processing",
+          "description": "Advanced algorithms for realistic texture mapping and lighting effects on virtual clothing."
         },
         "item-5": {
-          "title": "MediaWiki",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "GAN Technology",
+          "description": "Generative Adversarial Networks for creating photorealistic try-on results with natural body proportions."
         },
         "item-6": {
-          "title": "Google PaLM",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "AI Optimization",
+          "description": "Continuous learning and improvement of try-on accuracy through machine learning algorithms."
         }
       }
     },
     "integration2": {
-      "title": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
-      "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
+      "title": "Experience the power of AI try-on",
+      "description": "Join thousands of users who are already experiencing the future of virtual shopping with our AI-powered try-on technology.",
+      "primaryButton": "Try It Now",
+      "secondaryButton": "View Demo"
     },
     "features": {
       "title": "Features",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "subtitle": "Revolutionary AI-powered virtual try-on features",
+      "description": "Discover the advanced capabilities that make AI Tryon the leading virtual try-on platform in the industry.",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here, make it as detailed as possible, make it more attractive to users"
+          "title": "Instant AI Try-On",
+          "description": "Upload your photo and any clothing item to see how it looks on you instantly. Our AI generates realistic try-on results in seconds, eliminating the need for physical fitting rooms."
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here, make it as detailed as possible, make it more attractive to users"
+          "title": "Advanced Body Detection",
+          "description": "Our AI accurately detects body proportions, pose, and lighting to ensure clothing fits naturally and looks realistic on your virtual avatar."
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here, make it as detailed as possible, make it more attractive to users"
+          "title": "Multiple Clothing Types",
+          "description": "Try on any type of clothing - from tops and dresses to pants and accessories. Our AI handles various fabrics, patterns, and styles with precision."
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here, make it as detailed as possible, make it more attractive to users"
+          "title": "High-Resolution Results",
+          "description": "Generate high-quality, photorealistic try-on images with detailed textures, proper lighting, and natural body proportions for the most accurate representation."
         }
       }
     },
     "features2": {
-      "title": "Features2",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
-      "feature-1": "Product Feature One",
-      "feature-2": "Product Feature Two",
-      "feature-3": "Product Feature Three",
-      "feature-4": "Product Feature Four"
+      "title": "Why Choose AI Tryon",
+      "subtitle": "The advantages of AI-powered virtual try-on",
+      "description": "Experience the future of fashion shopping with our cutting-edge AI technology",
+      "feature-1": "Instant Results",
+      "feature-2": "Accurate Fitting",
+      "feature-3": "Multiple Styles",
+      "feature-4": "High Quality"
     },
     "features3": {
-      "title": "Features3",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "title": "Advanced AI Capabilities",
+      "subtitle": "Cutting-edge technology for perfect virtual try-on",
+      "description": "Our AI platform combines multiple advanced technologies to deliver the most realistic virtual try-on experience",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here"
+          "title": "Real-time Processing",
+          "description": "Generate try-on results in real-time with our optimized AI algorithms"
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here"
+          "title": "Smart Pose Detection",
+          "description": "Automatically detect and adapt to different body poses for accurate clothing placement"
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here"
+          "title": "Texture Mapping",
+          "description": "Advanced texture mapping ensures clothing looks natural and fits perfectly"
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here"
+          "title": "Lighting Adaptation",
+          "description": "AI automatically adjusts lighting and shadows to match your photo's environment"
         },
         "item-5": {
-          "title": "Product Feature Five",
-          "description": "Please write the detailed description of feature five here"
+          "title": "Size Optimization",
+          "description": "Intelligent sizing algorithms ensure clothing fits your body proportions perfectly"
         },
         "item-6": {
-          "title": "Product Feature Six",
-          "description": "Please write the detailed description of feature six here"
+          "title": "Quality Enhancement",
+          "description": "AI-powered image enhancement for crystal-clear, professional-quality results"
         }
       }
     },
     "pricing": {
       "title": "Pricing",
-      "subtitle": "Pricing",
-      "description": "Choose the plan that works best for you"
+      "subtitle": "Choose Your Try-On Plan",
+      "description": "Select the perfect plan for your virtual try-on needs"
     },
     "faqs": {
       "title": "FAQ",
       "subtitle": "Frequently Asked Questions",
       "items": {
         "item-1": {
-          "question": "Do you offer a free trial?",
-          "answer": "Yes, we offer a 7-day free trial."
+          "question": "How accurate are the AI try-on results?",
+          "answer": "Our AI technology provides highly accurate try-on results with realistic fitting and natural appearance. The accuracy depends on photo quality and lighting conditions."
         },
         "item-2": {
-          "question": "How do I cancel my subscription?",
-          "answer": "You can cancel your subscription by visiting the billing page."
+          "question": "What types of clothing can I try on?",
+          "answer": "You can try on virtually any type of clothing including tops, dresses, pants, skirts, and accessories. Our AI handles various fabrics, patterns, and styles."
         },
         "item-3": {
-          "question": "Can I change my plan?",
-          "answer": "Yes, you can change your plan at any time by visiting the billing page."
+          "question": "How long does it take to generate results?",
+          "answer": "Most try-on results are generated within 10-30 seconds, depending on image complexity and server load."
         },
         "item-4": {
-          "question": "What is the refund policy?",
-          "answer": "We offer a 30-day money-back guarantee if you are not happy with our product."
+          "question": "Can I use my own clothing photos?",
+          "answer": "Yes! You can upload photos of your own clothing items or use images from online stores to see how they look on you."
         },
         "item-5": {
-          "question": "Can't find what you're looking for?",
-          "answer": "Please contact our customer support team at support@mksaas.com"
+          "question": "Is my personal data secure?",
+          "answer": "Absolutely. We prioritize your privacy and security. All uploaded images are processed securely and deleted after generation."
         }
       }
     },
     "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "What our customers are saying",
+      "title": "Customer Reviews",
+      "subtitle": "What our users are saying about AI Tryon",
       "items": {
         "item-1": {
-          "name": "Jonathan Yombo",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/1.jpg",
-          "quote": "MkSaaS is really extraordinary and very practical, no need to break your head. A real gold mine."
+          "name": "Sarah Johnson",
+          "role": "Fashion Blogger",
+          "image": "https://randomuser.me/api/portraits/women/1.jpg",
+          "quote": "AI Tryon has completely changed how I shop online. The accuracy is incredible - I can see exactly how clothes will fit before buying!"
         },
         "item-2": {
-          "name": "Yves Kalume",
-          "role": "GDE - Android",
+          "name": "Michael Chen",
+          "role": "E-commerce Manager",
           "image": "https://randomuser.me/api/portraits/men/6.jpg",
-          "quote": "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to MkSaaS."
+          "quote": "As a fashion retailer, AI Tryon has increased our conversion rates by 40%. Customers love being able to visualize products on themselves."
         },
         "item-3": {
-          "name": "Yucel Faruksahan",
-          "role": "Tailkits Creator",
-          "image": "https://randomuser.me/api/portraits/men/7.jpg",
-          "quote": "Great work on MkSaaS template. This is one of the best personal website that I have seen so far :)"
+          "name": "Emma Rodriguez",
+          "role": "Fashion Designer",
+          "role": "Fashion Designer",
+          "image": "https://randomuser.me/api/portraits/women/7.jpg",
+          "quote": "The AI technology is mind-blowing! I can see how my designs look on different body types instantly. It's revolutionized my design process."
         },
         "item-4": {
-          "name": "Anonymous author",
-          "role": "Product Manager",
+          "name": "David Kim",
+          "role": "Online Shopper",
           "image": "https://randomuser.me/api/portraits/men/8.jpg",
-          "quote": "I downloaded the one of MkSaaS template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page."
+          "quote": "No more guessing if clothes will fit! AI Tryon gives me confidence in my online purchases. The results are incredibly realistic."
         },
         "item-5": {
-          "name": "Shekinah Tshiokufila",
-          "role": "Senior Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/4.jpg",
-          "quote": "MkSaaS is redefining the standard of web design, with these blocks it provides an easy and efficient way for those who love beauty but may lack the time to implement it."
+          "name": "Lisa Thompson",
+          "role": "Fashion Influencer",
+          "image": "https://randomuser.me/api/portraits/women/4.jpg",
+          "quote": "This is the future of online shopping! AI Tryon's technology is so advanced, it feels like I'm actually trying on clothes in a store."
         },
         "item-6": {
-          "name": "Oketa Fred",
-          "role": "Fullstack Developer",
+          "name": "Alex Martinez",
+          "role": "Retail Consultant",
           "image": "https://randomuser.me/api/portraits/men/2.jpg",
-          "quote": "I absolutely love MkSaaS! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze."
+          "quote": "The accuracy and speed of AI Tryon is impressive. It's helping bridge the gap between online and in-store shopping experiences."
         },
         "item-7": {
-          "name": "Zeki",
-          "role": "Founder of ChatExtend",
-          "image": "https://randomuser.me/api/portraits/men/5.jpg",
-          "quote": "MkSaaS is the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly."
+          "name": "Rachel Green",
+          "role": "Fashion Stylist",
+          "image": "https://randomuser.me/api/portraits/women/5.jpg",
+          "quote": "I use AI Tryon for all my clients. It's perfect for virtual styling sessions and helps clients make confident purchase decisions."
         },
         "item-8": {
-          "name": "Joseph Kitheka",
-          "role": "Fullstack Developer",
+          "name": "James Wilson",
+          "role": "Tech Entrepreneur",
           "image": "https://randomuser.me/api/portraits/men/9.jpg",
-          "quote": "MkSaaS has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow."
+          "quote": "The AI technology behind AI Tryon is cutting-edge. It's not just a gimmick - it's genuinely useful and accurate."
         },
         "item-9": {
-          "name": "Khatab Wedaa",
-          "role": "MerakiUI Creator",
-          "image": "https://randomuser.me/api/portraits/men/10.jpg",
-          "quote": "MkSaaS is an elegant, clean, and responsive tailwind css components it's very helpful to start fast with your project."
+          "name": "Maria Garcia",
+          "role": "Fashion Retailer",
+          "image": "https://randomuser.me/api/portraits/women/10.jpg",
+          "quote": "AI Tryon has transformed our online store. Our customers can now visualize products perfectly, leading to higher satisfaction and fewer returns."
         },
         "item-10": {
-          "name": "Rodrigo Aguilar",
-          "role": "TailwindAwesome Creator",
+          "name": "Carlos Rodriguez",
+          "role": "E-commerce Director",
           "image": "https://randomuser.me/api/portraits/men/11.jpg",
-          "quote": "I love MkSaaS ❤️. The component blocks are well-structured, simple to use, and beautifully designed. It makes it really easy to have a good-looking website in no time."
+          "quote": "The accuracy of AI Tryon is remarkable. Our conversion rates have increased significantly since implementing this technology."
         },
         "item-11": {
-          "name": "Eric Ampire",
-          "role": "@GoogleDevExpert for Android",
-          "image": "https://randomuser.me/api/portraits/men/12.jpg",
-          "quote": "MkSaaS templates are the perfect solution for anyone who wants to create a beautiful and functional website without any web design experience."
+          "name": "Anna Kim",
+          "role": "Fashion Consultant",
+          "image": "https://randomuser.me/api/portraits/women/12.jpg",
+          "quote": "AI Tryon is a game-changer for online fashion. It bridges the gap between digital and physical shopping experiences perfectly."
         },
         "item-12": {
-          "name": "Roland Tubonge",
-          "role": "Software Engineer",
+          "name": "Tom Wilson",
+          "role": "Tech Analyst",
           "image": "https://randomuser.me/api/portraits/men/13.jpg",
-          "quote": "MkSaaS is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!"
+          "quote": "The AI technology behind AI Tryon is cutting-edge. It's not just innovative - it's genuinely useful and accurate."
         }
       }
     },
     "stats": {
-      "title": "Stats",
-      "subtitle": "MkSaaS in numbers",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+      "title": "AI Tryon by the Numbers",
+      "subtitle": "Revolutionizing virtual try-on worldwide",
+      "description": "Join millions of users who trust AI Tryon for their virtual fashion experience",
       "items": {
         "item-1": {
-          "title": "Stars on GitHub"
+          "title": "Try-Ons Generated"
         },
         "item-2": {
-          "title": "Active Users"
+          "title": "Happy Users"
         },
         "item-3": {
-          "title": "Powered Apps"
+          "title": "Fashion Brands"
         }
       }
     },
     "calltoaction": {
-      "title": "Start Building",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-      "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
+      "title": "Start Your Virtual Try-On Journey",
+      "description": "Join thousands of users who are already experiencing the future of fashion shopping with AI Tryon",
+      "primaryButton": "Try It Now",
+      "secondaryButton": "View Demo"
     }
   },
   "AITextPage": {
     "title": "AI Text",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+    "description": "AI Tryon - Revolutionary AI-powered virtual try-on experience",
     "content": "Working in progress"
   },
   "AIImagePage": {
     "title": "AI Image",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+    "description": "AI Tryon - Revolutionary AI-powered virtual try-on experience",
     "content": "Working in progress"
   },
   "AIVideoPage": {
     "title": "AI Video",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+    "description": "AI Tryon - Revolutionary AI-powered virtual try-on experience",
     "content": "Working in progress"
   },
   "AIAudioPage": {
     "title": "AI Audio",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+    "description": "AI Tryon - Revolutionary AI-powered virtual try-on experience",
     "content": "Working in progress"
+  },
+  "OutfitRoom": {
+    "sidebar": "Try-On Room",
+    "content": "Under Development",
+    "filters": {
+      "all": "All"
+    },
+    "model": {
+      "select": "Select Model",
+      "selected": "Selected Model",
+      "selectBtn": "Try-On Model",
+      "selectTitle": "Select Try-On Model",
+      "confirmSelect": "Confirm",
+      "noSelected": "No model selected",
+      "add": "Add Model",
+      "addTitle": "Add Custom Model",
+      "image": "Model Image",
+      "name": "Name",
+      "style": "Style",
+      "height": "Height",
+      "weight": "Weight",
+      "body": "Body Type",
+      "gender": "Gender",
+      "female": "Female",
+      "male": "Male",
+      "confirm": "Confirm Add"
+    },
+    "upload": {
+      "img": "Upload Image",
+      "tip": "Click or drag image here"
+    },
+    "cancel": "Cancel",
+    "cloth": {
+      "type": "Clothing Type",
+      "topbottom": "Top & Bottom",
+      "onesuit": "One Piece",
+      "top": "Top",
+      "bottom": "Bottom"
+    },
+    "start": "Start Try-On",
+    "generating": "Generating try-on effect...",
+    "display": {
+      "placeholder": "Please select model and clothing first, then click start try-on"
+    },
+    "result": {
+      "title": "AI Try-On Result",
+      "tryAgain": "Try Again",
+      "download": "Download Image"
+    }
   }
 }

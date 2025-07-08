@@ -26,17 +26,12 @@ import { useTranslations } from 'next-intl';
  */
 export function getSidebarLinks(): NestedMenuItem[] {
   const t = useTranslations('Dashboard');
+  const outfitT = useTranslations('OutfitRoom');
 
   // if is demo website, allow user to access admin and user pages, but data is fake
   const isDemo = process.env.NEXT_PUBLIC_DEMO_WEBSITE === 'true';
 
   return [
-    {
-      title: t('dashboard.title'),
-      icon: <LayoutDashboardIcon className="size-4 shrink-0" />,
-      href: Routes.Dashboard,
-      external: false,
-    },
     {
       title: t('admin.title'),
       icon: <SettingsIcon className="size-4 shrink-0" />,
@@ -49,6 +44,18 @@ export function getSidebarLinks(): NestedMenuItem[] {
           external: false,
         },
       ],
+    },
+    {
+      title: t('dashboard.title'),
+      icon: <LayoutDashboardIcon className="size-4 shrink-0" />,
+      href: Routes.Dashboard,
+      external: false,
+    },
+    {
+      title: outfitT('sidebar'),
+      icon: <span className="size-4 shrink-0">👗</span>,
+      href: '/outfit_room',
+      external: false,
     },
     {
       title: t('settings.title'),

@@ -43,6 +43,8 @@ export function DashboardSidebar({
     return true;
   });
 
+
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -64,6 +66,7 @@ export function DashboardSidebar({
               </LocaleLink>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
         </SidebarMenu>
       </SidebarHeader>
 

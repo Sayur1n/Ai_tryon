@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
-    "title": "MkSaaS - 最好的 AI SaaS 模板",
-    "description": "MkSaaS 是构建 AI SaaS 的最佳模板，使用 MkSaaS 可以在几天内轻松构建您的 AI SaaS，简单且毫不费力。"
+    "name": "AI Tryon",
+    "title": "AI Tryon - 革命性的AI虚拟试衣体验",
+    "description": "AI Tryon 是终极的AI驱动虚拟试衣平台。上传您的照片和服装图片，通过先进的AI生成技术立即看到它们穿在您身上的效果。"
   },
   "Common": {
     "login": "登录",
@@ -32,8 +32,8 @@
   },
   "PricingPage": {
     "title": "价格",
-    "description": "选择最适合您的付费计划",
-    "subtitle": "选择最适合您的付费计划",
+    "description": "为您的试衣需求选择完美计划",
+    "subtitle": "为您的试衣需求选择完美计划",
     "monthly": "月付",
     "yearly": "年付",
     "PricingCard": {
@@ -57,32 +57,32 @@
   "PricePlans": {
     "free": {
       "name": "免费版",
-      "description": "适用于个人使用的基本功能",
+      "description": "适用于个人使用的基本试衣功能",
       "features": {
-        "feature-1": "最多3个项目",
-        "feature-2": "1GB存储空间",
-        "feature-3": "基础分析功能",
+        "feature-1": "每天5次试衣尝试",
+        "feature-2": "标准分辨率结果",
+        "feature-3": "基础服装类型",
         "feature-4": "社区支持"
       },
       "limits": {
-        "limit-1": "不支持自定义域名",
-        "limit-2": "不支持自定义品牌",
-        "limit-3": "不支持终身更新"
+        "limit-1": "高分辨率结果",
+        "limit-2": "优先处理",
+        "limit-3": "高级AI功能"
       }
     },
     "pro": {
       "name": "专业版",
-      "description": "专业人士的高级功能",
+      "description": "时尚爱好者的高级功能",
       "features": {
-        "feature-1": "无限项目",
-        "feature-2": "10GB存储空间",
-        "feature-3": "高级分析功能",
+        "feature-1": "无限试衣尝试",
+        "feature-2": "高分辨率结果",
+        "feature-3": "所有服装类型",
         "feature-4": "优先支持",
-        "feature-5": "自定义域名"
+        "feature-5": "高级AI功能"
       },
       "limits": {
-        "limit-1": "不支持自定义品牌",
-        "limit-2": "不支持终身更新"
+        "limit-1": "批量处理",
+        "limit-2": "API访问"
       }
     },
     "lifetime": {
@@ -90,13 +90,12 @@
       "description": "一次性付款获得所有高级功能",
       "features": {
         "feature-1": "所有专业版功能",
-        "feature-2": "100GB存储空间",
+        "feature-2": "批量处理",
         "feature-3": "专属支持",
-        "feature-4": "企业级安全",
-        "feature-5": "高级集成",
-        "feature-6": "自定义域名",
-        "feature-7": "自定义品牌",
-        "feature-8": "终身更新"
+        "feature-4": "API访问",
+        "feature-5": "自定义集成",
+        "feature-6": "优先处理",
+        "feature-7": "终身更新"
       }
     }
   },
@@ -118,6 +117,30 @@
     "introduction": "👋 你好，这里是 MkSaaS，一个使用最先进的技术栈构建的 AI SaaS 模板，它可以帮助你更快更好地构建你的 SaaS。如果你有任何问题，欢迎联系我。",
     "talkWithMe": "联系我",
     "followMe": "关注我"
+  },
+  "OutfitPage": {
+    "title": "AI虚拟试衣",
+    "description": "探索我们的AI虚拟试衣功能，体验革命性的试衣体验",
+    "subtitle": "选择最适合您的穿搭风格",
+    "filters": {
+      "all": "全部",
+      "male": "男装",
+      "female": "女装"
+    },
+    "card": {
+      "tryOn": "试衣服",
+      "buyNow": "立即购买"
+    },
+    "carousel": {
+      "top": "上衣",
+      "bottom": "下装"
+    },
+    "emptyState": "没有找到符合条件的穿搭风格",
+    "item": "件",
+    "items": "件",
+    "viewOutfit": "查看穿搭",
+    "outfitDetails": "穿搭详情",
+    "outfitDesc": "体验AI虚拟试衣的时尚未来"
   },
   "ChangelogPage": {
     "title": "更新日志",
@@ -269,6 +292,9 @@
       },
       "pricing": {
         "title": "价格"
+      },
+      "outfit": {
+        "title": "套餐"
       },
       "blog": {
         "title": "博客"
@@ -438,7 +464,7 @@
   },
   "Dashboard": {
     "dashboard": {
-      "title": "仪表盘"
+      "title": "历史记录"
     },
     "admin": {
       "title": "系统管理",
@@ -616,6 +642,37 @@
       "title": "升级",
       "description": "升级到Pro以获取所有功能",
       "button": "升级"
+    },
+    "outfitHistory": {
+      "title": "AI换衣历史记录",
+      "resultTitle": "换衣结果",
+      "originalPerson": "原人物图",
+      "topGarment": "上衣",
+      "bottomGarment": "下装",
+      "result": "结果图",
+      "noResult": "暂无结果",
+      "download": "下载",
+      "downloading": "下载中...",
+      "status": {
+        "succeeded": "成功",
+        "failed": "失败",
+        "running": "处理中",
+        "pending": "等待中"
+      },
+      "filters": {
+        "all": "全部",
+        "today": "今天",
+        "week": "最近7天",
+        "month": "最近30天",
+        "custom": "自定义日期"
+      },
+      "searchPlaceholder": "搜索任务ID或状态...",
+      "totalResults": "共找到",
+      "results": "条记录",
+      "page": "页",
+      "previous": "上一页",
+      "next": "下一页",
+      "noResults": "暂无历史记录"
     }
   },
   "Mail": {
@@ -647,269 +704,318 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "使用 MkSaaS 在几天内轻松构建您的 AI SaaS 产品",
+    "title": "AI Tryon",
+    "description": "体验AI驱动的虚拟试衣技术带来的未来购物体验",
     "hero": {
-      "title": "使用 MkSaaS 轻松构建您的 AI SaaS 产品",
-      "description": "MkSaaS 是构建 AI SaaS 的最佳模板，内置 AI、身份验证、全球支付、博客、文档、邮件订阅、SEO、多彩主题、丰富组件等。",
-      "introduction": "介绍 MkSaaS 模板",
-      "primary": "开始使用",
+      "title": "使用AI技术进行虚拟试衣",
+      "description": "AI Tryon 革命性地改变了在线购物体验，让您能够立即看到服装穿在身上的效果。上传您的照片和服装图片，使用先进的AI生成技术生成逼真的试衣效果。",
+      "introduction": "介绍 AI Tryon",
+      "primary": "立即试用",
       "secondary": "查看演示"
     },
     "logocloud": {
-      "title": "您最爱公司都是我们的合作伙伴"
+      "title": "全球领先时尚品牌的信赖之选"
     },
     "integration": {
-      "title": "集成",
-      "subtitle": "与您最喜欢的工具集成",
-      "description": "无缝连接流行的平台和服务，以增强您的工作流程。",
+      "title": "AI技术",
+      "subtitle": "由尖端AI模型驱动",
+      "description": "我们的平台利用最先进的AI技术，提供逼真准确的虚拟试衣体验。",
       "learnMore": "了解更多",
       "items": {
         "item-1": {
-          "title": "Google Gemini",
-          "description": "这里是Google Gemini的描述，详细介绍Google Gemini的功能和优势。"
+          "title": "Stable Diffusion",
+          "description": "先进的图像生成技术，用于逼真的服装可视化和无缝集成。"
         },
         "item-2": {
-          "title": "Replit",
-          "description": "这里是Replit的描述，详细介绍Replit的功能和优势。"
+          "title": "计算机视觉",
+          "description": "精确的身体检测和姿势估计，确保服装准确放置和贴合。"
         },
         "item-3": {
-          "title": "MagicUI",
-          "description": "这里是MagicUI的描述，详细介绍MagicUI的功能和优势。"
+          "title": "深度学习",
+          "description": "在数百万时尚图像上训练的神经网络，提供卓越的试衣准确性。"
         },
         "item-4": {
-          "title": "VSCodium",
-          "description": "这里是VSCodium的描述，详细介绍VSCodium的功能和优势。"
+          "title": "图像处理",
+          "description": "先进的算法，用于虚拟服装的逼真纹理映射和光照效果。"
         },
         "item-5": {
-          "title": "MediaWiki",
-          "description": "这里是MediaWiki的描述，详细介绍MediaWiki的功能和优势。"
+          "title": "GAN技术",
+          "description": "生成对抗网络，创建具有自然身体比例的逼真试衣效果。"
         },
         "item-6": {
-          "title": "Google PaLM",
-          "description": "这里是Google PaLM的描述，详细介绍Google PaLM的功能和优势。"
+          "title": "AI优化",
+          "description": "通过机器学习算法持续学习和改进试衣准确性。"
         }
       }
     },
     "integration2": {
-      "title": "与您最喜欢的工具集成",
-      "description": "无缝连接流行的平台和服务，以增强您的工作流程。",
-      "primaryButton": "开始使用",
+      "title": "体验AI试衣的强大功能",
+      "description": "加入数千名已经在体验我们AI驱动试衣技术带来的未来购物体验的用户。",
+      "primaryButton": "立即试用",
       "secondaryButton": "查看演示"
     },
     "features": {
-      "title": "功能",
-      "subtitle": "您的 SaaS 产品功能",
-      "description": "请在这里介绍您的 SaaS 产品的特色功能的信息",
+      "title": "功能特色",
+      "subtitle": "革命性的AI驱动虚拟试衣功能",
+      "description": "发现使AI Tryon成为行业领先虚拟试衣平台的先进功能。",
       "items": {
         "item-1": {
-          "title": "产品特色功能一",
-          "description": "请在这里详细描述您的产品特色功能一，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "即时AI试衣",
+          "description": "上传您的照片和任何服装单品，立即看到穿在身上的效果。我们的AI在几秒钟内生成逼真的试衣效果，无需实体试衣间。"
         },
         "item-2": {
-          "title": "产品特色功能二",
-          "description": "请在这里详细描述您的产品特色功能二，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "先进的身体检测",
+          "description": "我们的AI准确检测身体比例、姿势和光照，确保服装自然贴合并在您的虚拟形象上看起来逼真。"
         },
         "item-3": {
-          "title": "产品特色功能三",
-          "description": "请在这里详细描述您的产品特色功能三，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "多种服装类型",
+          "description": "试穿任何类型的服装 - 从上衣和连衣裙到裤子和配饰。我们的AI精确处理各种面料、图案和风格。"
         },
         "item-4": {
-          "title": "产品特色功能四",
-          "description": "请在这里详细描述您的产品特色功能四，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "高分辨率结果",
+          "description": "生成高质量、逼真的试衣图像，具有详细的纹理、适当的光照和自然的身体比例，提供最准确的展示效果。"
         }
       }
     },
     "features2": {
-      "title": "功能2",
-      "subtitle": "您的 SaaS 产品功能",
-      "description": "请在这里介绍您的 SaaS 产品的特色功能的信息",
-      "feature-1": "特色功能特点一",
-      "feature-2": "特色功能特点二",
-      "feature-3": "特色功能特点三",
-      "feature-4": "特色功能特点四"
+      "title": "为什么选择AI Tryon",
+      "subtitle": "AI驱动虚拟试衣的优势",
+      "description": "体验我们尖端AI技术带来的未来时尚购物体验",
+      "feature-1": "即时结果",
+      "feature-2": "准确贴合",
+      "feature-3": "多种风格",
+      "feature-4": "高质量"
     },
     "features3": {
-      "title": "功能3",
-      "subtitle": "您的 SaaS 产品功能",
-      "description": "请在这里介绍您的 SaaS 产品的特色功能的信息",
+      "title": "先进AI功能",
+      "subtitle": "完美虚拟试衣的尖端技术",
+      "description": "我们的AI平台结合多种先进技术，提供最逼真的虚拟试衣体验",
       "items": {
         "item-1": {
-          "title": "产品特色功能一",
-          "description": "请在这里详细描述您的产品特色功能一，尽可能详细，使其更吸引用户"
+          "title": "实时处理",
+          "description": "通过我们优化的AI算法实时生成试衣效果"
         },
         "item-2": {
-          "title": "产品特色功能二",
-          "description": "请在这里详细描述您的产品特色功能二，尽可能详细，使其更吸引用户"
+          "title": "智能姿势检测",
+          "description": "自动检测并适应不同的身体姿势，确保服装准确放置"
         },
         "item-3": {
-          "title": "产品特色功能三",
-          "description": "请在这里详细描述您的产品特色功能三，尽可能详细，使其更吸引用户"
+          "title": "纹理映射",
+          "description": "先进的纹理映射确保服装看起来自然且完美贴合"
         },
         "item-4": {
-          "title": "产品特色功能四",
-          "description": "请在这里详细描述您的产品特色功能四，尽可能详细，使其更吸引用户"
+          "title": "光照适应",
+          "description": "AI自动调整光照和阴影，匹配您照片的环境"
         },
         "item-5": {
-          "title": "产品特色功能五",
-          "description": "请在这里详细描述您的产品特色功能五，尽可能详细，使其更吸引用户"
+          "title": "尺寸优化",
+          "description": "智能尺寸算法确保服装完美贴合您的身体比例"
         },
         "item-6": {
-          "title": "产品特色功能六",
-          "description": "请在这里详细描述您的产品特色功能六，尽可能详细，使其更吸引用户"
+          "title": "质量增强",
+          "description": "AI驱动的图像增强，提供清晰、专业质量的结果"
         }
       }
     },
     "pricing": {
       "title": "价格",
-      "subtitle": "价格",
-      "description": "选择最适合您的付费计划"
+      "subtitle": "选择您的试衣计划",
+      "description": "为您的虚拟试衣需求选择完美计划"
     },
     "faqs": {
       "title": "常见问题",
       "subtitle": "如果您有任何问题，请随时联系我们",
       "items": {
         "item-1": {
-          "question": "你们提供免费试用吗？",
-          "answer": "是的，我们提供7天的免费试用。"
+          "question": "AI试衣效果的准确性如何？",
+          "answer": "我们的AI技术提供高度准确的试衣效果，具有逼真的贴合度和自然外观。准确性取决于照片质量和光照条件。"
         },
         "item-2": {
-          "question": "如何取消我的订阅？",
-          "answer": "您可以通过访问账单页面取消您的订阅。"
+          "question": "我可以试穿哪些类型的服装？",
+          "answer": "您可以试穿几乎所有类型的服装，包括上衣、连衣裙、裤子、裙子和配饰。我们的AI处理各种面料、图案和风格。"
         },
         "item-3": {
-          "question": "我可以更改我的计划吗？",
-          "answer": "是的，您可以随时通过访问账单页面更改您的计划。"
+          "question": "生成结果需要多长时间？",
+          "answer": "大多数试衣效果在10-30秒内生成，具体取决于图像复杂度和服务器负载。"
         },
         "item-4": {
-          "question": "你们的退款政策是什么？",
-          "answer": "是的，我们提供30天的退款保证。"
+          "question": "我可以使用自己的服装照片吗？",
+          "answer": "是的！您可以上传自己服装单品的照片或使用在线商店的图像来查看穿在身上的效果。"
         },
         "item-5": {
-          "question": "找不到您想问的问题？",
-          "answer": "请联系我们的客户支持团队，邮箱地址：support@mksaas.com"
+          "question": "我的个人数据安全吗？",
+          "answer": "绝对安全。我们优先考虑您的隐私和安全。所有上传的图像都经过安全处理，生成后会被删除。"
         }
       }
     },
     "testimonials": {
-      "title": "客户评价",
-      "subtitle": "我们的客户对我们的评价",
+      "title": "用户评价",
+      "subtitle": "我们的用户对AI Tryon的评价",
       "items": {
         "item-1": {
-          "name": "Jonathan Yombo",
-          "role": "软件工程师",
-          "image": "https://randomuser.me/api/portraits/men/1.jpg",
-          "quote": "MkSaaS 非常出色且实用，无需费心，一个真正的金矿。"
+          "name": "Sarah Johnson",
+          "role": "时尚博主",
+          "image": "https://randomuser.me/api/portraits/women/1.jpg",
+          "quote": "AI Tryon 完全改变了我的在线购物方式。准确性令人难以置信 - 我可以在购买前准确看到服装的贴合效果！"
         },
         "item-2": {
-          "name": "Yves Kalume",
-          "role": "Android GDE",
+          "name": "Michael Chen",
+          "role": "电商经理",
           "image": "https://randomuser.me/api/portraits/men/6.jpg",
-          "quote": "没有网页设计经验，我只需几分钟就可以用 Tailwindcss 重新设计我的整个网站，感谢 MkSaaS。"
+          "quote": "作为时尚零售商，AI Tryon 使我们的转化率提高了40%。客户喜欢能够在购买前看到产品穿在身上的效果。"
         },
         "item-3": {
-          "name": "Yucel Faruksahan",
-          "role": "Tailkits 创建者",
-          "image": "https://randomuser.me/api/portraits/men/7.jpg",
-          "quote": "MkSaaS 模板做得很好，这是我见过最好的 SaaS 模板，没有之一 :)"
+          "name": "Emma Rodriguez",
+          "role": "时尚设计师",
+          "image": "https://randomuser.me/api/portraits/women/7.jpg",
+          "quote": "AI技术令人震撼！我可以立即看到我的设计在不同体型上的效果。它彻底改变了我的设计过程。"
         },
         "item-4": {
-          "name": "Anonymous author",
-          "role": "产品经理",
+          "name": "David Kim",
+          "role": "在线购物者",
           "image": "https://randomuser.me/api/portraits/men/8.jpg",
-          "quote": "我不熟悉 Tailwind，我想自己做一些页面，我在网上搜索了很多英雄页面和区块。然而，大多数都没有给我一个清晰的想法，或者需要一些 HTML/CSS 编码背景来从原始文件中做一些更改，或者太贵了。我下载了其中一个 MkSaaS 模板，它非常容易理解，你可以在开始时修改代码/区块以完美地适应你的页面目的。"
+          "quote": "不再猜测服装是否合身！AI Tryon 让我对在线购买充满信心。结果非常逼真。"
         },
         "item-5": {
-          "name": "Shekinah Tshiokufila",
-          "role": "高级软件工程师",
-          "image": "https://randomuser.me/api/portraits/men/4.jpg",
-          "quote": "MkSaaS 正在重新定义网页设计标准，这些区块为那些喜欢美丽但可能缺乏时间实现它的人提供了简单且高效的方式。我只能推荐这个不可思议的奇迹。"
+          "name": "Lisa Thompson",
+          "role": "时尚影响者",
+          "image": "https://randomuser.me/api/portraits/women/4.jpg",
+          "quote": "这是在线购物的未来！AI Tryon 的技术如此先进，感觉就像在实体店试衣一样。"
         },
         "item-6": {
-          "name": "Oketa Fred",
-          "role": "全栈开发工程师",
+          "name": "Alex Martinez",
+          "role": "零售顾问",
           "image": "https://randomuser.me/api/portraits/men/2.jpg",
-          "quote": "我绝对喜欢 MkSaaS！这些组件区块设计精美且易于使用，使创建一个出色的网站变得轻而易举。"
+          "quote": "AI Tryon 的准确性和速度令人印象深刻。它正在帮助弥合在线和实体店购物体验之间的差距。"
         },
         "item-7": {
-          "name": "Zeki",
-          "role": "ChatExtend 创始人",
-          "image": "https://randomuser.me/api/portraits/men/5.jpg",
-          "quote": "使用 MkSaaS 就像解锁了一个秘密的设计超能力。它是简单性和多功能性的完美融合，使我们能够创建既令人惊叹又用户友好的界面。"
+          "name": "Rachel Green",
+          "role": "时尚造型师",
+          "image": "https://randomuser.me/api/portraits/women/5.jpg",
+          "quote": "我为所有客户使用AI Tryon。它非常适合虚拟造型会议，帮助客户做出自信的购买决定。"
         },
         "item-8": {
-          "name": "Joseph Kitheka",
-          "role": "全栈开发工程师",
+          "name": "James Wilson",
+          "role": "科技企业家",
           "image": "https://randomuser.me/api/portraits/men/9.jpg",
-          "quote": "MkSaaS 改变了我的网页开发方式。他们的 UI 组件、区块和模板极大地加速了我的工作流程。定制每个方面的灵活性使我能够创建独特的用户体验。MkSaaS 是现代网页开发的游戏规则改变者！"
+          "quote": "AI Tryon 背后的AI技术是尖端的。这不仅仅是一个噱头 - 它真正有用且准确。"
         },
         "item-9": {
-          "name": "Khatab Wedaa",
-          "role": "MerakiUI 创建者",
-          "image": "https://randomuser.me/api/portraits/men/10.jpg",
-          "quote": "MkSaaS 是一个优雅、干净且响应式的 SaaS 模板，它非常有助于快速开始您的项目。"
+          "name": "Maria Garcia",
+          "role": "时尚零售商",
+          "image": "https://randomuser.me/api/portraits/women/10.jpg",
+          "quote": "AI Tryon 彻底改变了我们的在线商店。我们的客户现在可以完美地可视化产品，带来更高的满意度和更少的退货。"
         },
         "item-10": {
-          "name": "Rodrigo Aguilar",
-          "role": "TailwindAwesome 创建者",
+          "name": "Carlos Rodriguez",
+          "role": "电商总监",
           "image": "https://randomuser.me/api/portraits/men/11.jpg",
-          "quote": "我爱 MkSaaS ❤️。这些组件区块结构良好，易于使用，设计精美。它使创建一个出色的网站变得非常容易。"
+          "quote": "AI Tryon 的准确性令人印象深刻。自从实施这项技术以来，我们的转化率显著提高。"
         },
         "item-11": {
-          "name": "Eric Ampire",
-          "role": "Google 开发者专家",
-          "image": "https://randomuser.me/api/portraits/men/12.jpg",
-          "quote": "MkSaaS 模板是任何想要创建一个美丽且功能齐全的网站但没有网页设计经验的人的完美解决方案。这些模板易于使用，可定制，并且响应迅速。我强烈推荐 MkSaaS 模板给任何想要创建网站的人。"
+          "name": "Anna Kim",
+          "role": "时尚顾问",
+          "image": "https://randomuser.me/api/portraits/women/12.jpg",
+          "quote": "AI Tryon 是在线时尚的游戏规则改变者。它完美地弥合了数字和实体购物体验之间的差距。"
         },
         "item-12": {
-          "name": "Roland Tubonge",
-          "role": "软件工程师",
+          "name": "Tom Wilson",
+          "role": "技术分析师",
           "image": "https://randomuser.me/api/portraits/men/13.jpg",
-          "quote": "MkSaaS 设计得如此出色，即使没有网页设计经验，您也可以创造奇迹。让自己被吸引！"
+          "quote": "AI Tryon 背后的AI技术是尖端的。它不仅仅是创新 - 它真正有用且准确。"
         }
       }
     },
     "stats": {
-      "title": "统计",
-      "subtitle": "MkSaaS 相关的数字",
-      "description": "MkSaaS 可让您在几天内轻松构建您的 AI SaaS",
+      "title": "AI Tryon 数据统计",
+      "subtitle": "全球虚拟试衣革命",
+      "description": "加入数百万信任AI Tryon虚拟时尚体验的用户",
       "items": {
         "item-1": {
-          "title": "GitHub 上的星星"
+          "title": "试衣生成次数"
         },
         "item-2": {
-          "title": "使用 MkSaaS 的活跃用户"
+          "title": "满意用户"
         },
         "item-3": {
-          "title": "使用 MkSaaS 启动的应用"
+          "title": "时尚品牌"
         }
       }
     },
     "calltoaction": {
-      "title": "开始构建",
-      "description": "MkSaaS 可让您在几天内轻松构建您的 AI SaaS",
-      "primaryButton": "开始使用",
+      "title": "开始您的虚拟试衣之旅",
+      "description": "加入数千名已经在体验AI Tryon未来时尚购物体验的用户",
+      "primaryButton": "立即试用",
       "secondaryButton": "查看演示"
     }
   },
   "AITextPage": {
     "title": "AI 文本",
-    "description": "MkSaaS 让您在几天内轻松构建您的 AI SaaS，简单且毫不费力",
+    "description": "AI Tryon - 革命性的AI驱动虚拟试衣体验",
     "content": "正在开发中"
   },
   "AIImagePage": {
     "title": "AI 图片",
-    "description": "MkSaaS 让您在几天内轻松构建您的 AI SaaS，简单且毫不费力",
+    "description": "AI Tryon - 革命性的AI驱动虚拟试衣体验",
     "content": "正在开发中"
   },
   "AIVideoPage": {
     "title": "AI 视频",
-    "description": "MkSaaS 让您在几天内轻松构建您的 AI SaaS，简单且毫不费力",
+    "description": "AI Tryon - 革命性的AI驱动虚拟试衣体验",
     "content": "正在开发中"
   },
   "AIAudioPage": {
     "title": "AI 音频",
-    "description": "MkSaaS 让您在几天内轻松构建您的 AI SaaS，简单且毫不费力",
+    "description": "AI Tryon - 革命性的AI驱动虚拟试衣体验",
     "content": "正在开发中"
+  },
+  "OutfitRoom": {
+    "sidebar": "试衣间",
+    "content": "开发中",
+    "filters": {
+      "all": "全部"
+    },
+    "model": {
+      "select": "选择模特",
+      "selected": "已选模特",
+      "selectBtn": "试衣模特",
+      "selectTitle": "选择试衣模特",
+      "confirmSelect": "确定",
+      "noSelected": "未选择模特",
+      "add": "新增模特",
+      "addTitle": "新增自定义模特",
+      "image": "模特图片",
+      "name": "姓名",
+      "style": "风格",
+      "height": "身高",
+      "weight": "体重",
+      "body": "身材",
+      "gender": "性别",
+      "female": "女性",
+      "male": "男性",
+      "confirm": "确认新增"
+    },
+    "upload": {
+      "img": "上传图片",
+      "tip": "点击或拖拽图片到这里"
+    },
+    "cancel": "取消",
+    "cloth": {
+      "type": "服装类型",
+      "topbottom": "上下装",
+      "onesuit": "单件连体",
+      "top": "上装",
+      "bottom": "下装"
+    },
+    "start": "开始试衣服",
+    "generating": "试衣效果生成中...",
+    "display": {
+      "placeholder": "请先选择模特和服装，点击开始试衣服"
+    },
+    "result": {
+      "title": "AI试衣结果",
+      "tryAgain": "重新试衣",
+      "download": "下载图片"
+    }
   }
 }
