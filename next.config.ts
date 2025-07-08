@@ -48,6 +48,18 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'html.tailus.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'help-static-aliyun-doc.aliyuncs.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bailian-bmp-prod.oss-cn-beijing.aliyuncs.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'a1-tryon-test.oss-cn-beijing.aliyuncs.com',
+      }
     ],
   },
 };

@@ -42,11 +42,8 @@ export const LoginWrapper = ({
     router.push(loginPath);
   };
 
-  // this is to prevent the login wrapper from being rendered on the server side
-  // and causing a hydration error
-  if (!mounted) {
-    return null;
-  }
+  // 在服务器端和客户端都渲染相同的内容，避免水合错误
+  // 使用 useEffect 来处理客户端特定的逻辑
 
   if (mode === 'modal') {
     return (

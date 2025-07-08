@@ -60,15 +60,20 @@ export function getNavbarLinks(): NestedMenuItem[] {
       external: false,
     },
     {
-      title: t('blog.title'),
-      href: Routes.Blog,
+      title: t('outfit.title'),
+      href: '/outfit',
       external: false,
     },
-    {
-      title: t('docs.title'),
-      href: Routes.Docs,
-      external: false,
-    },
+    // {
+    //   title: t('blog.title'),
+    //   href: Routes.Blog,
+    //   external: false,
+    // },
+    // {
+    //   title: t('docs.title'),
+    //   href: Routes.Docs,
+    //   external: false,
+    // },
     {
       title: t('ai.title'),
       items: [

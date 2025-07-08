@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { useCurrentUser } from '@/hooks/use-current-user';
+
 import { useLocalePathname } from '@/i18n/navigation';
 import { formatPrice } from '@/lib/formatter';
 import { cn } from '@/lib/utils';
@@ -23,7 +23,7 @@ import {
 import { CheckCircleIcon, XCircleIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { LoginWrapper } from '../auth/login-wrapper';
-import { CheckoutButton } from './create-checkout-button';
+
 
 interface PricingCardProps {
   plan: PricePlan;
@@ -77,7 +77,6 @@ export function PricingCard({
 }: PricingCardProps) {
   const t = useTranslations('PricingPage.PricingCard');
   const price = getPriceForPlan(plan, interval, paymentType);
-  const currentUser = useCurrentUser();
   const currentPath = useLocalePathname();
   // console.log('pricing card, currentPath', currentPath);
 
@@ -152,17 +151,11 @@ export function PricingCard({
 
         {/* show action buttons based on plans */}
         {plan.isFree ? (
-          currentUser ? (
-            <Button variant="outline" className="mt-4 w-full disabled">
+          <LoginWrapper mode="modal" asChild callbackUrl={currentPath}>
+            <Button variant="outline" className="mt-4 w-full cursor-pointer">
               {t('getStartedForFree')}
             </Button>
-          ) : (
-            <LoginWrapper mode="modal" asChild callbackUrl={currentPath}>
-              <Button variant="outline" className="mt-4 w-full cursor-pointer">
-                {t('getStartedForFree')}
-              </Button>
-            </LoginWrapper>
-          )
+          </LoginWrapper>
         ) : isCurrentPlan ? (
           <Button
             disabled
@@ -172,23 +165,11 @@ export function PricingCard({
             {t('yourCurrentPlan')}
           </Button>
         ) : isPaidPlan ? (
-          currentUser ? (
-            <CheckoutButton
-              userId={currentUser.id}
-              planId={plan.id}
-              priceId={price.priceId}
-              metadata={metadata}
-              className="mt-4 w-full cursor-pointer"
-            >
+          <LoginWrapper mode="modal" asChild callbackUrl={currentPath}>
+            <Button variant="default" className="mt-4 w-full cursor-pointer">
               {plan.isLifetime ? t('getLifetimeAccess') : t('getStarted')}
-            </CheckoutButton>
-          ) : (
-            <LoginWrapper mode="modal" asChild callbackUrl={currentPath}>
-              <Button variant="default" className="mt-4 w-full cursor-pointer">
-                {t('getStarted')}
-              </Button>
-            </LoginWrapper>
-          )
+            </Button>
+          </LoginWrapper>
         ) : (
           <Button disabled className="mt-4 w-full">
             {t('notAvailable')}
