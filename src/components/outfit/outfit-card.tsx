@@ -165,18 +165,18 @@ export function OutfitCard({ outfit }: OutfitCardProps) {
 
         {/* 底部栏 */}
         <div className="px-4 py-3 border-t bg-white rounded-b-xl">
-          {/* 商品描述 - 按钮上方和分界线之间，始终占位 */}
-          <div className={`text-xs mb-3 p-2 rounded border max-h-12 overflow-hidden min-h-[2rem] ${
+          {/* 商品描述 - 预留三行空间，确保卡片对齐 */}
+          <div className={`text-xs mb-3 p-2 rounded border h-16 overflow-hidden ${
             outfit.description 
               ? 'text-gray-600 bg-gray-50 border-gray-200' 
               : 'text-transparent bg-transparent border-transparent'
           }`}>
             {outfit.description ? (
-              <>
+              <div className="line-clamp-3">
                 <strong>描述:</strong> {outfit.description}
-              </>
+              </div>
             ) : (
-              <div>占位</div>
+              <div className="invisible">占位</div>
             )}
           </div>
           

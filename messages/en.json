@@ -196,6 +196,57 @@
       "emailValidation": "Please enter a valid email address"
     }
   },
+  "Merchant": {
+    "sidebar": {
+      "title": "Merchant Management",
+      "users": "User Management",
+      "outfits": "Outfit Management",
+      "models": "Model Management",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "outfits": {
+      "title": "Outfit Management",
+      "description": "Manage outfit card data",
+      "addOutfit": "Add Outfit",
+      "editOutfit": "Edit Outfit",
+      "deleteOutfit": "Delete Outfit",
+      "form": {
+        "modelImage": "Model Image",
+        "topImage": "Top Image",
+        "bottomImage": "Bottom Image",
+        "description": "Product Description",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "topLink": "Top Link",
+        "bottomLink": "Bottom Link",
+        "modelLink": "Model Link",
+        "save": "Save",
+        "cancel": "Cancel"
+      }
+    },
+    "models": {
+      "title": "Model Management",
+      "description": "Manage default model data",
+      "addModel": "Add Model",
+      "editModel": "Edit Model",
+      "deleteModel": "Delete Model",
+      "form": {
+        "name": "Model Name",
+        "style": "Style",
+        "height": "Height",
+        "weight": "Weight",
+        "body": "Body Type",
+        "image": "Model Image",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "save": "Save",
+        "cancel": "Cancel"
+      }
+    }
+  },
   "AuthPage": {
     "login": {
       "title": "Login",
@@ -219,6 +270,10 @@
       "name": "Name",
       "email": "Email",
       "password": "Password",
+      "accountType": "Account Type",
+      "accountTypeUser": "User",
+      "accountTypeMerchant": "Merchant",
+      "accountTypeAdmin": "Admin",
       "signUp": "Sign Up",
       "signInHint": "Already have an account? Sign in",
       "checkEmail": "Please check your email inbox",
@@ -227,6 +282,7 @@
       "nameRequired": "Please enter your name",
       "emailRequired": "Please enter your email",
       "passwordRequired": "Please enter your password",
+      "accountTypeRequired": "Please select account type",
       "captchaInvalid": "Captcha verification failed",
       "captchaError": "Captcha verification error"
     },

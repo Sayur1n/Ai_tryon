@@ -58,6 +58,37 @@ export function getSidebarLinks(): NestedMenuItem[] {
       ],
     },
     {
+      title: '商家管理',
+      icon: <SettingsIcon className="size-4 shrink-0" />,
+      authorizeOnly: ['merchant', 'admin'],
+      items: [
+        {
+          title: '服装管理',
+          icon: <span className="size-4 shrink-0">👕</span>,
+          href: '/merchant/outfits',
+          external: false,
+        },
+        {
+          title: '模特管理',
+          icon: <span className="size-4 shrink-0">👤</span>,
+          href: '/merchant/models',
+          external: false,
+        },
+        {
+          title: '用户管理',
+          icon: <UsersRoundIcon className="size-4 shrink-0" />,
+          href: '/merchant/users',
+          external: false,
+        },
+        {
+          title: '设置',
+          icon: <Settings2Icon className="size-4 shrink-0" />,
+          href: '/merchant/settings',
+          external: false,
+        },
+      ],
+    },
+    {
       title: t('settings.title'),
       icon: <Settings2Icon className="size-4 shrink-0" />,
       items: [

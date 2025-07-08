@@ -196,6 +196,57 @@
       "emailValidation": "请输入有效的邮箱地址"
     }
   },
+  "Merchant": {
+    "sidebar": {
+      "title": "商家管理",
+      "users": "用户管理",
+      "outfits": "服装管理",
+      "models": "模特管理",
+      "settings": "设置",
+      "logout": "退出登录"
+    },
+    "outfits": {
+      "title": "服装管理",
+      "description": "管理服装卡片数据",
+      "addOutfit": "添加服装",
+      "editOutfit": "编辑服装",
+      "deleteOutfit": "删除服装",
+      "form": {
+        "modelImage": "模特图片",
+        "topImage": "上衣图片",
+        "bottomImage": "下衣图片",
+        "description": "商品描述",
+        "gender": "性别",
+        "male": "男装",
+        "female": "女装",
+        "topLink": "上衣链接",
+        "bottomLink": "下衣链接",
+        "modelLink": "模特链接",
+        "save": "保存",
+        "cancel": "取消"
+      }
+    },
+    "models": {
+      "title": "模特管理",
+      "description": "管理默认模特数据",
+      "addModel": "添加模特",
+      "editModel": "编辑模特",
+      "deleteModel": "删除模特",
+      "form": {
+        "name": "模特名称",
+        "style": "风格",
+        "height": "身高",
+        "weight": "体重",
+        "body": "体型",
+        "image": "模特图片",
+        "gender": "性别",
+        "male": "男",
+        "female": "女",
+        "save": "保存",
+        "cancel": "取消"
+      }
+    }
+  },
   "AuthPage": {
     "login": {
       "title": "登录",
@@ -219,6 +270,10 @@
       "name": "姓名",
       "email": "邮箱",
       "password": "密码",
+      "accountType": "账号类型",
+      "accountTypeUser": "普通用户",
+      "accountTypeMerchant": "商家",
+      "accountTypeAdmin": "管理员",
       "signUp": "注册",
       "signInHint": "已经有账号？登录",
       "checkEmail": "请检查您的邮箱",
@@ -227,6 +282,7 @@
       "nameRequired": "请输入姓名",
       "emailRequired": "请输入邮箱",
       "passwordRequired": "请输入密码",
+      "accountTypeRequired": "请选择账号类型",
       "captchaInvalid": "验证码验证失败",
       "captchaError": "验证码验证出错"
     },

@@ -36,6 +36,7 @@ export function DashboardSidebar({
   // console.log('sidebar currentUser:', currentUser);
 
   const sidebarLinks = getSidebarLinks();
+  
   const filteredSidebarLinks = sidebarLinks.filter((link) => {
     if (link.authorizeOnly) {
       return link.authorizeOnly.includes(currentUser?.role || '');

@@ -41,7 +41,7 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
-    requireEmailVerification: true,
+    requireEmailVerification: false,
     // https://www.better-auth.com/docs/authentication/email-password#forget-password
     async sendResetPassword({ user, url }, request) {
       const locale = getLocaleFromRequest(request);

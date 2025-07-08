@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Plus, UploadCloud, CheckCircle2 } from "lucide-react";
+import { Plus, UploadCloud, CheckCircle2, Trash2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useCurrentUser } from "@/hooks/use-current-user";
 
@@ -46,7 +46,10 @@ export default function OutfitRoomPage() {
   const [isTrying, setIsTrying] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string>("");
   // 模特筛选
-  const [modelFilter, setModelFilter] = useState<'all' | 'male' | 'female'>('all');
+  const [modelFilter, setModelFilter] = useState<'all' | 'male' | 'female' | 'custom'>('all');
+  // 删除确认对话框
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [modelToDelete, setModelToDelete] = useState<Model | null>(null);
 
   // 上传图片到OSS
   async function uploadImageToOSS(file: File, type: 'model' | 'cloth'): Promise<string> {
@@ -125,6 +128,41 @@ export default function OutfitRoomPage() {
       console.error('Error saving custom model:', error);
       alert('保存模特失败');
     }
+  }
+
+  // 删除自定义模特
+  async function handleDeleteCustomModel(modelId: string) {
+    try {
+      const response = await fetch(`/api/custom-model/${modelId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        // 从列表中移除模特
+        setModels(prev => prev.filter(model => model.id !== modelId));
+        setCustomModels(prev => prev.filter(model => model.id !== modelId));
+        
+        // 如果删除的是当前选中的模特，清空选择
+        if (selectedModel?.id === modelId) {
+          setSelectedModel(null);
+        }
+        
+        // 关闭确认对话框
+        setShowDeleteConfirm(false);
+        setModelToDelete(null);
+      } else {
+        alert('删除模特失败');
+      }
+    } catch (error) {
+      console.error('Error deleting custom model:', error);
+      alert('删除模特失败');
+    }
+  }
+
+  // 显示删除确认对话框
+  function showDeleteConfirmDialog(model: Model) {
+    setModelToDelete(model);
+    setShowDeleteConfirm(true);
   }
   // 上传服装图片
   async function handleClothImage(e: React.ChangeEvent<HTMLInputElement>, type: "top" | "bottom" | "onesuit") {
@@ -232,6 +270,7 @@ export default function OutfitRoomPage() {
   // 根据筛选器获取显示的模特列表
   const filteredModels = models.filter(model => {
     if (modelFilter === 'all') return true;
+    if (modelFilter === 'custom') return model.isCustom === 'true';
     return model.gender === modelFilter;
   });
 
@@ -493,6 +532,16 @@ export default function OutfitRoomPage() {
                   >
                     {t('model.male')}
                   </button>
+                  <button
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+                      modelFilter === 'custom' 
+                        ? 'bg-primary text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                    onClick={() => setModelFilter('custom')}
+                  >
+                    自定义
+                  </button>
                 </div>
               </div>
               <div className="flex-1 overflow-y-auto px-8 py-4">
@@ -526,6 +575,19 @@ export default function OutfitRoomPage() {
                 >
                   <CheckCircle2 className="w-5 h-5" /> {t('model.confirmSelect')}
                 </button>
+                {/* 删除自定义模特按钮 */}
+                {selectedModel?.isCustom === 'true' && (
+                  <button
+                    className="flex items-center gap-1 px-4 py-2 rounded bg-red-500 text-white font-bold text-lg hover:bg-red-600 transition"
+                    onClick={() => {
+                      if (selectedModel) {
+                        showDeleteConfirmDialog(selectedModel);
+                      }
+                    }}
+                  >
+                    <Trash2 className="w-5 h-5" /> 删除
+                  </button>
+                )}
                 <button
                   className="flex items-center gap-1 px-4 py-2 rounded bg-gray-200 text-gray-700 font-bold text-lg hover:bg-gray-300 transition"
                   onClick={() => setShowModelSelect(false)}
@@ -578,6 +640,68 @@ export default function OutfitRoomPage() {
                   disabled={!(addModelData.name && addModelData.style && addModelData.height && addModelData.weight && addModelData.body && addModelImage)}
                 >
                   <Plus className="w-5 h-5" /> {t('model.confirm')}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+        {/* 删除确认对话框 */}
+        {showDeleteConfirm && modelToDelete && (
+          <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                  <Trash2 className="w-6 h-6 text-red-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">删除自定义模特</h3>
+                  <p className="text-sm text-gray-500">此操作无法撤销</p>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <p className="text-gray-700 mb-3">
+                  确定要删除自定义模特 <span className="font-semibold">{modelToDelete.name}</span> 吗？
+                </p>
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-16 h-20 relative">
+                      <Image 
+                        src={modelToDelete.image} 
+                        alt={modelToDelete.name} 
+                        fill 
+                        className="object-contain rounded"
+                        sizes="64px"
+                      />
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      <div><strong>风格:</strong> {modelToDelete.style}</div>
+                      <div><strong>身高:</strong> {modelToDelete.height}</div>
+                      <div><strong>体重:</strong> {modelToDelete.weight}</div>
+                      <div><strong>体型:</strong> {modelToDelete.body}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-3 justify-end">
+                <button
+                  className="px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
+                  onClick={() => {
+                    setShowDeleteConfirm(false);
+                    setModelToDelete(null);
+                  }}
+                >
+                  取消
+                </button>
+                <button
+                  className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                  onClick={() => {
+                    handleDeleteCustomModel(modelToDelete.id);
+                    setShowModelSelect(false);
+                  }}
+                >
+                  确认删除
                 </button>
               </div>
             </div>

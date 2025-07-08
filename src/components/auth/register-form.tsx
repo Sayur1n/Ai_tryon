@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { websiteConfig } from '@/config/website';
 import { authClient } from '@/lib/auth-client';
 import { getUrlWithLocaleInCallbackUrl } from '@/lib/urls/urls';
@@ -51,6 +52,7 @@ export const RegisterForm = ({
   const [success, setSuccess] = useState<string | undefined>('');
   const [isPending, setIsPending] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const { refetch } = authClient.useSession();
 
   // turnstile captcha schema
   const turnstileEnabled = websiteConfig.features.enableTurnstileCaptcha;
@@ -68,6 +70,9 @@ export const RegisterForm = ({
     name: z.string().min(1, {
       message: t('nameRequired'),
     }),
+    accountType: z.enum(['user', 'merchant', 'admin'], {
+      required_error: t('accountTypeRequired'),
+    }),
     captchaToken: captchaSchema,
   });
 
@@ -77,6 +82,7 @@ export const RegisterForm = ({
       email: '',
       password: '',
       name: '',
+      accountType: 'user',
       captchaToken: '',
     },
   });
@@ -94,17 +100,16 @@ export const RegisterForm = ({
       });
 
       if (!captchaResult?.data?.success || !captchaResult?.data?.valid) {
-        console.error('register, captcha invalid:', values.captchaToken);
         const errorMessage = captchaResult?.data?.error || t('captchaInvalid');
         setError(errorMessage);
         return;
       }
     }
 
-    // 1. if requireEmailVerification is true, callbackURL will be used in the verification email,
-    // the user will be redirected to the callbackURL after the email is verified.
-    // 2. if requireEmailVerification is false, the user will not be redirected to the callbackURL,
-    // we should redirect to the callbackURL manually in the onSuccess callback.
+    // 将账号类型存储到sessionStorage，供后续使用
+    sessionStorage.setItem('pendingAccountType', values.accountType);
+
+    // 使用Better Auth的标准注册流程
     await authClient.signUp.email(
       {
         email: values.email,
@@ -114,30 +119,65 @@ export const RegisterForm = ({
       },
       {
         onRequest: (ctx) => {
-          console.log('register, request:', ctx.url);
           setIsPending(true);
           setError('');
           setSuccess('');
         },
         onResponse: (ctx) => {
-          console.log('register, response:', ctx.response);
           setIsPending(false);
         },
-        onSuccess: (ctx) => {
-          // sign up success, user information stored in ctx.data
-          // console.log("register, success:", ctx.data);
-          setSuccess(t('checkEmail'));
+        onSuccess: async (ctx) => {
+          // 设置用户角色（非阻塞）
+          if (ctx.data.user?.id) {
+            fetch('/api/auth/set-role', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                userId: ctx.data.user.id,
+                role: values.accountType,
+              }),
+            }).catch(error => {
+              console.error('Failed to set user role:', error);
+            });
+          }
+
+          // 注册成功后自动登录
+          try {
+            await authClient.signIn.email(
+              {
+                email: values.email,
+                password: values.password,
+                callbackURL: callbackUrl,
+              },
+              {
+                onSuccess: async (ctx) => {
+                  setSuccess('注册成功，正在跳转...');
+                  
+                  // 强制刷新会话以获取最新的用户信息
+                  try {
+                    await refetch();
+                  } catch (error) {
+                    console.error('Failed to refresh session:', error);
+                  }
+                },
+                onError: (ctx) => {
+                  setSuccess(t('checkEmail'));
+                },
+              }
+            );
+          } catch (error) {
+            setSuccess(t('checkEmail'));
+          }
 
           // add affonso affiliate
-          // https://affonso.io/app/affiliate-program/connect
           if (websiteConfig.features.enableAffonsoAffiliate) {
-            console.log('register, affonso affiliate:', values.email);
             window.Affonso.signup(values.email);
           }
         },
         onError: (ctx) => {
           // sign up fail, display the error message
-          console.error('register, error:', ctx.error);
           setError(`${ctx.error.status}: ${ctx.error.message}`);
         },
       }
@@ -184,6 +224,28 @@ export const RegisterForm = ({
                       type="email"
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="accountType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('accountType')}</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isPending}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder={t('accountType')} />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="user">{t('accountTypeUser')}</SelectItem>
+                      <SelectItem value="merchant">{t('accountTypeMerchant')}</SelectItem>
+                      <SelectItem value="admin">{t('accountTypeAdmin')}</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}

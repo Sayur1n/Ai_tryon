@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
       image,
       gender,
       selected: 'false',
-      isCustom: 'true'
+      isCustom: session.user.role === 'merchant' || session.user.role === 'admin' ? 'false' : 'true'
     }).returning();
 
     return NextResponse.json({ success: true, model: newModel[0] });
