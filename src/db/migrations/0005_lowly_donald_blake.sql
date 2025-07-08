@@ -1,0 +1,1 @@
+ALTER TABLE "custom_model" ALTER COLUMN "user_id" DROP NOT NULL;

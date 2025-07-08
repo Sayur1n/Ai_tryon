@@ -1,0 +1,46 @@
+[
+    {
+        "id": "rouyan",
+        "name": "Rouyan",
+        "style": "elegant",
+        "height": "165cm",
+        "weight": "52cm",
+        "body": "Pear shape",
+        "image": "https://bailian-bmp-prod.oss-cn-beijing.aliyuncs.com/public/img_to_img/ai_tryon/tryon_models/02.png",
+        "selected": "true",
+        "isCustom": "false"
+    },
+    {
+        "id": "yaqi",
+        "name": "Yaqi",
+        "style": "sweet",
+        "height": "167cm",
+        "weight": "52kg",
+        "body": "Hourglass shape",
+        "image": "https://bailian-bmp-prod.oss-cn-beijing.aliyuncs.com/public/img_to_img/ai_tryon/tryon_models/01.png",
+        "selected": "false",
+        "isCustom": "false"
+    },
+    {
+        "id": "yufei",
+        "name": "Yufei",
+        "style": "athletic",
+        "height": "167cm",
+        "weight": "52kg",
+        "body": "Hourglass shape",
+        "image": "https://bailian-bmp-prod.oss-cn-beijing.aliyuncs.com/public/img_to_img/ai_tryon/tryon_models/00.png",
+        "selected": "false",
+        "isCustom": "false"
+    },
+    {
+        "id": "eva",
+        "name": "Eva",
+        "style": "elegant",
+        "height": "174cm",
+        "weight": "52kg",
+        "body": "Pear shape",
+        "image": "https://bailian-bmp-prod.oss-cn-beijing.aliyuncs.com/public/img_to_img/ai_tryon/tryon_models/03.png",
+        "selected": "false",
+        "isCustom": "false"
+    }
+]

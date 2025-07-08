@@ -1,0 +1,102 @@
+[
+    {
+      "id": "tryon_2024_011_female_party",
+      "url": "https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1760598171/p812707.png",
+      "type": "2",
+      "sex": "female",
+      "split_images": [
+          {
+              "id": "split_2024_011_top_party_dress",
+              "url": "https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2389646171/p801332.jpeg",
+              "type": "top",
+              "amazon_url": "https://www.amazon.com"
+          },
+          {
+              "id": "split_2024_011_bottom_party_shoes",
+              "url": "https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1389646171/p801326.jpeg",
+              "type": "bottom",
+              "amazon_url": "https://www.amazon.com"
+          }
+      ]
+    },
+  {
+    "id": "tryon_2024_001_female_summer",
+    "type": "2",
+    "sex": "female",
+    "split_images": [
+      {
+        "id": "split_2024_001_top_summer_dress",
+        "url": "https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1389646171/p801327.jpeg",
+        "type": "top",
+        "amazon_url": "https://www.amazon.com/dp/B08N5WRWNW"
+      }
+    ]
+  },
+  {
+    "id": "tryon_2024_002_male_business",
+    "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/ai-tryon/results/1751891458297_Aqyv72.jpg",
+    "type": "1",
+    "sex": "male",
+    "split_images": [
+      {
+        "id": "split_2024_002_top_suit_jacket",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751891430021_y7o18b.jpg",
+        "type": "top",
+        "amazon_url": "https://www.amazon.com/dp/B08L5W8J8K"
+      },
+      {
+        "id": "split_2024_002_bottom_suit_pants",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751891430021_1gbbbu.jpeg",
+        "type": "bottom",
+        "amazon_url": "https://www.amazon.com/dp/B08L5W8J8L"
+      }
+    ]
+  },
+  {
+    "id": "tryon_2024_003_female_casual",
+    "type": "2",
+    "sex": "female",
+    "split_images": [
+      {
+        "id": "split_2024_003_top_blouse",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751891550602_pbd25v.jpg",
+        "type": "top",
+        "amazon_url": "https://www.amazon.com/dp/B08N5WRWNW"
+      },
+      {
+        "id": "split_2024_003_bottom_skirt",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751891556310_splulo.jpeg",
+        "type": "bottom",
+        "amazon_url": "https://www.amazon.com/dp/B07ZPKBL9W"
+      }
+    ]
+  },
+  {
+    "id": "tryon_2024_004_male_casual",
+    "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/ai-tryon/results/1751891680568_QrqyCQ.jpg",
+    "type": "1",
+    "sex": "male",
+    "split_images": [
+      {
+        "id": "split_2024_004_top_tshirt",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751891660437_cgwper.jpg",
+        "type": "top",
+        "amazon_url": "https://www.amazon.com/dp/B08L5W8J8M"
+      }
+    ]
+  },
+  {
+    "id": "tryon_2024_005_female_evening",
+    "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/ai-tryon/results/1751895026210_NP4wjR.jpg",
+    "type": "2",
+    "sex": "female",
+    "split_images": [
+      {
+        "id": "split_2024_005_top_evening_dress",
+        "url": "http://a1-tryon-test.oss-cn-beijing.aliyuncs.com/cloth/1751895005178_x2pszj.jpg",
+        "type": "top",
+        "amazon_url": "https://www.amazon.com/dp/B08N5WRWNY"
+      }
+    ]
+  }
+]
