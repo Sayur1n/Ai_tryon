@@ -3,35 +3,11 @@ import { getDb } from '@/db';
 import { outfitResult } from '@/db/schema';
 import { nanoid } from 'nanoid';
 import { auth } from '@/lib/auth';
-import OSS from 'ali-oss';
+import { uploadRemoteImageToOSS } from '@/lib/oss-utils';
 
 const API_KEY = process.env.ALIYUN_DASHSCOPE_API_KEY;
 if (!API_KEY) {
   throw new Error('ALIYUN_DASHSCOPE_API_KEY 环境变量未配置');
-}
-const OSS_REGION = process.env.OSS_REGION!;
-const OSS_ACCESS_KEY_ID = process.env.OSS_ACCESS_KEY_ID!;
-const OSS_ACCESS_KEY_SECRET = process.env.OSS_ACCESS_KEY_SECRET!;
-const OSS_BUCKET = process.env.OSS_BUCKET!;
-const OSS_ENDPOINT = process.env.OSS_ENDPOINT;
-
-const client = new OSS({
-  region: OSS_REGION,
-  accessKeyId: OSS_ACCESS_KEY_ID,
-  accessKeySecret: OSS_ACCESS_KEY_SECRET,
-  bucket: OSS_BUCKET,
-  endpoint: OSS_ENDPOINT,
-  // @ts-expect-error ali-oss v6+ supports V4 signature, but types are not updated yet
-  authorizationV4: true,
-});
-
-async function uploadToOSS(url: string, key: string): Promise<string> {
-  // 下载远程图片并上传到OSS
-  const res = await fetch(url);
-  if (!res.ok) throw new Error('下载图片失败');
-  const buffer = Buffer.from(await res.arrayBuffer());
-  const result = await client.put(key, buffer);
-  return result.url;
 }
 
 async function pollTask(taskId: string): Promise<string> {
@@ -113,7 +89,7 @@ export async function POST(request: NextRequest) {
     }
     // 3. 上传结果图片到OSS
     const ossKey = `ai-tryon/results/${Date.now()}_${nanoid(6)}.jpg`;
-    const ossUrl = await uploadToOSS(resultImageUrl, ossKey);
+    const ossUrl = await uploadRemoteImageToOSS(resultImageUrl, ossKey);
     // 4. 保存到数据库
     const db = await getDb();
     await db.insert(outfitResult).values({

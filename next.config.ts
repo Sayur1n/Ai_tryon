@@ -81,9 +81,19 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'bailian-bmp-prod.oss-cn-beijing.aliyuncs.com',
       },
+      // 阿里云 OSS 域名 - 确保使用 HTTPS
       {
-        protocol: 'http',
+        protocol: 'https',
         hostname: 'a1-tryon-test.oss-cn-beijing.aliyuncs.com',
+      },
+      // 通用阿里云 OSS 域名模式
+      {
+        protocol: 'https',
+        hostname: '*.oss-cn-*.aliyuncs.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.oss-cn-*.aliyun-inc.com',
       }
     ],
   },

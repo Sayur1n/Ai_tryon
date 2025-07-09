@@ -1,8 +1,14 @@
-初始化
+# 阿里云 OSS 配置说明
+
+## HTTPS 协议配置
+
+本项目已配置为强制使用 HTTPS 协议访问阿里云 OSS，确保所有图片上传都返回 HTTPS 地址，避免混合内容警告。
+
+## 初始化
 
 请注意，以下代码示例默认使用Bucket公网域名以及RAM用户的AK信息。
 
- 
+```javascript
 const OSS = require('ali-oss');
 
 const client = new OSS({
@@ -18,6 +24,15 @@ const client = new OSS({
   // yourEndpoint填写Bucket所在地域对应的公网Endpoint。以华东1（杭州）为例，Endpoint填写为https://oss-cn-hangzhou.aliyuncs.com。
   endpoint: 'https://oss-cn-hangzhou.aliyuncs.com',
 });
+```
+
+## 项目中的 OSS 工具函数
+
+项目使用 `src/lib/oss-utils.ts` 中的工具函数进行文件上传，确保返回 HTTPS 地址：
+
+- `uploadFileToOSS(file, type)` - 上传本地文件到 OSS
+- `uploadRemoteImageToOSS(imageUrl, key)` - 上传远程图片到 OSS
+- `ensureHTTPS(url)` - 确保 URL 使用 HTTPS 协议
 
 
 Node.js快速入门
