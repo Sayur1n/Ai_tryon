@@ -7,9 +7,10 @@ import { parseHeight, parseWeight, validateModelData } from '@/lib/model-utils';
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await auth.api.getSession({
       headers: request.headers,
     });
@@ -56,7 +57,7 @@ export async function PUT(
         gender,
         isCustom: session.user.role === 'merchant' || session.user.role === 'admin' ? 'false' : 'true'
       })
-      .where(eq(customModel.id, params.id))
+      .where(eq(customModel.id, id))
       .returning();
 
     if (updatedModel.length === 0) {
@@ -72,9 +73,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await auth.api.getSession({
       headers: request.headers,
     });
@@ -86,9 +88,9 @@ export async function DELETE(
     
     // 商家和管理员可以删除任何模特，普通用户只能删除自己的自定义模特
     const deleteCondition = session.user.role === 'merchant' || session.user.role === 'admin'
-      ? eq(customModel.id, params.id)
+      ? eq(customModel.id, id)
       : and(
-          eq(customModel.id, params.id),
+          eq(customModel.id, id),
           eq(customModel.userId, session.user.id),
           eq(customModel.isCustom, 'true')
         );

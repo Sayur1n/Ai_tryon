@@ -7,9 +7,10 @@ import { eq } from 'drizzle-orm';
 // 更新模特
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getSession();
     if (!session || (session.user.role !== 'merchant' && session.user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -47,7 +48,7 @@ export async function PUT(
         selected: selected || 'false',
         isCustom: 'false' // 商户编辑的模特始终为默认模特
       })
-      .where(eq(customModel.id, params.id))
+      .where(eq(customModel.id, id))
       .returning();
 
     if (updatedModel.length === 0) {
@@ -64,9 +65,10 @@ export async function PUT(
 // 删除模特
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getSession();
     if (!session || (session.user.role !== 'merchant' && session.user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -75,7 +77,7 @@ export async function DELETE(
     const db = await getDb();
     
     const deletedModel = await db.delete(customModel)
-      .where(eq(customModel.id, params.id))
+      .where(eq(customModel.id, id))
       .returning();
 
     if (deletedModel.length === 0) {

@@ -7,9 +7,10 @@ import { eq } from 'drizzle-orm';
 // 更新服装
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getSession();
     if (!session || (session.user.role !== 'merchant' && session.user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -49,7 +50,7 @@ export async function PUT(
         type,
         isDefault: isDefault || 'true'
       })
-      .where(eq(outfitRoom.id, params.id))
+      .where(eq(outfitRoom.id, id))
       .returning();
 
     if (updatedOutfit.length === 0) {
@@ -66,9 +67,10 @@ export async function PUT(
 // 删除服装
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const session = await getSession();
     if (!session || (session.user.role !== 'merchant' && session.user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -77,7 +79,7 @@ export async function DELETE(
     const db = await getDb();
     
     const deletedOutfit = await db.delete(outfitRoom)
-      .where(eq(outfitRoom.id, params.id))
+      .where(eq(outfitRoom.id, id))
       .returning();
 
     if (deletedOutfit.length === 0) {
