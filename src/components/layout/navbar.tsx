@@ -51,7 +51,9 @@ export function Navbar({ scroll }: NavBarProps) {
   const [mounted, setMounted] = useState(false);
   const { data: session, isPending } = authClient.useSession();
   const currentUser = session?.user;
-  // console.log(`Navbar, user:`, user);
+  // console.log(`Navbar, session:`, session);
+  // console.log(`Navbar, isPending:`, isPending);
+  // console.log(`Navbar, currentUser:`, currentUser);
 
   useEffect(() => {
     setMounted(true);

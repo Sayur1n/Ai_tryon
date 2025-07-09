@@ -119,8 +119,8 @@
     "followMe": "Follow me on X"
   },
   "OutfitPage": {
-    "title": "AI Virtual Try-On",
-    "description": "Explore our AI virtual try-on features and experience revolutionary fitting",
+    "title": "Fashion Gallery",
+    "description": "Browse curated outfit collections and experience the future of fashion with AI virtual try-on",
     "subtitle": "Choose the outfit style that works best for you",
     "filters": {
       "all": "All",
@@ -1027,7 +1027,7 @@
     "content": "Working in progress"
   },
   "OutfitRoom": {
-    "sidebar": "Try-On Room",
+    "sidebar": "AI Virtual Try-On",
     "content": "Under Development",
     "filters": {
       "all": "All"

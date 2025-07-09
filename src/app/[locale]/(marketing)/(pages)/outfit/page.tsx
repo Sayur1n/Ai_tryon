@@ -17,8 +17,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Metadata' });
   const pt = await getTranslations({ locale, namespace: 'OutfitPage' });
 
+  // 根据语言设置不同的标题格式
+  const pageTitle = locale === 'zh' 
+    ? `${pt('title')} - ${t('name')}`
+    : `${pt('title')} | ${t('name')}`;
+
   return constructMetadata({
-    title: pt('title') + ' | ' + t('title'),
+    title: pageTitle,
     description: pt('description'),
     canonicalUrl: getUrlWithLocale('/outfit', locale),
   });

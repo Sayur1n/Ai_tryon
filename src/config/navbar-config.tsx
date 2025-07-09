@@ -89,7 +89,7 @@ export function getNavbarLinks(): NestedMenuItem[] {
           description: t('ai.items.image.description'),
           icon: <ImageIcon className="size-4 shrink-0" />,
           href: Routes.AIImage,
-          external: false,
+          external: true,
         },
         // {
         //   title: t('ai.items.video.title'),

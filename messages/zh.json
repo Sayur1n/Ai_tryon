@@ -119,8 +119,8 @@
     "followMe": "关注我"
   },
   "OutfitPage": {
-    "title": "AI虚拟试衣",
-    "description": "探索我们的AI虚拟试衣功能，体验革命性的试衣体验",
+    "title": "服装展示",
+    "description": "浏览精选服装搭配，体验AI虚拟试衣的时尚未来",
     "subtitle": "选择最适合您的穿搭风格",
     "filters": {
       "all": "全部",
@@ -350,7 +350,7 @@
         "title": "价格"
       },
       "outfit": {
-        "title": "试衣间"
+        "title": "服装广场"
       },
       "blog": {
         "title": "博客"
@@ -1026,7 +1026,7 @@
     "content": "正在开发中"
   },
   "OutfitRoom": {
-    "sidebar": "试衣间",
+    "sidebar": "AI虚拟试衣",
     "content": "开发中",
     "filters": {
       "all": "全部"

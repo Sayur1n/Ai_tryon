@@ -28,23 +28,33 @@ export default async function middleware(req: NextRequest) {
 
   // do not use getSession() here, it will cause error related to edge runtime
   // const session = await getSession();
-  const { data: session } = await betterFetch<Session>(
-    '/api/auth/get-session',
-    {
-      baseURL: getBaseUrl(),
-      headers: {
-        cookie: req.headers.get('cookie') || '', // Forward the cookies from the request
-      },
-    }
-  );
-  const isLoggedIn = !!session;
-  // console.log('middleware, isLoggedIn', isLoggedIn);
+  let isLoggedIn = false;
+  try {
+    const { data: session } = await betterFetch<Session>(
+      '/api/auth/get-session',
+      {
+        baseURL: getBaseUrl(),
+        headers: {
+          cookie: req.headers.get('cookie') || '', // Forward the cookies from the request
+        },
+        // 禁用缓存，确保获取最新的会话状态
+        cache: 'no-store',
+      }
+    );
+    isLoggedIn = !!session;
+    console.log('middleware, session:', session);
+  } catch (error) {
+    console.log('middleware, session fetch error:', error);
+  }
+  // console.log('middleware, isLoggedIn:', isLoggedIn);
 
   // Get the pathname of the request (e.g. /zh/dashboard to /dashboard)
   const pathnameWithoutLocale = getPathnameWithoutLocale(
     nextUrl.pathname,
     LOCALES
   );
+  // console.log('middleware, original pathname:', nextUrl.pathname);
+  // console.log('middleware, pathnameWithoutLocale:', pathnameWithoutLocale);
 
   // If the route can not be accessed by logged in users, redirect if the user is logged in
   if (isLoggedIn) {
@@ -59,10 +69,15 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
-  const isProtectedRoute = protectedRoutes.some((route) =>
-    new RegExp(`^${route}$`).test(pathnameWithoutLocale)
-  );
-  // console.log('middleware, isProtectedRoute', isProtectedRoute);
+  const isProtectedRoute = protectedRoutes.some((route) => {
+    // 检查路径是否以受保护的路由开头
+    const normalizedPath = pathnameWithoutLocale.replace(/\/$/, '');
+    const normalizedRoute = route.replace(/\/$/, '');
+    return normalizedPath === normalizedRoute || normalizedPath.startsWith(normalizedRoute + '/');
+  });
+  // console.log('middleware, pathnameWithoutLocale:', pathnameWithoutLocale);
+  // console.log('middleware, protectedRoutes:', protectedRoutes);
+  // console.log('middleware, isProtectedRoute:', isProtectedRoute);
 
   // If the route is a protected route, redirect to login if user is not logged in
   if (!isLoggedIn && isProtectedRoute) {

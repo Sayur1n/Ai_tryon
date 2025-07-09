@@ -18,6 +18,31 @@ const nextConfig: NextConfig = {
     // removeConsole: process.env.NODE_ENV === 'production',
   },
 
+  // 编译性能优化
+  swcMinify: true,
+
+  // 优化webpack配置
+  webpack: (config, { dev, isServer }) => {
+    // 开发环境优化
+    if (dev) {
+      // 减少开发时的编译时间
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+      };
+    }
+
+    // 优化模块解析
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+
+    return config;
+  },
+
   images: {
     // https://vercel.com/docs/image-optimization/managing-image-optimization-costs#minimizing-image-optimization-costs
     // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
