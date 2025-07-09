@@ -20,6 +20,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
+import { useSafeSession } from '@/hooks/use-safe-session';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -38,7 +39,7 @@ export function UpdateNameCard({ className }: UpdateNameCardProps) {
   const t = useTranslations('Dashboard.settings.profile');
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | undefined>('');
-  const { data: session, refetch } = authClient.useSession();
+  const { session, refetch } = useSafeSession();
 
   // Create a schema for name validation
   const formSchema = z.object({
@@ -52,7 +53,7 @@ export function UpdateNameCard({ className }: UpdateNameCardProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: session?.user?.name || '',
+      name: '',
     },
   });
 
@@ -60,7 +61,9 @@ export function UpdateNameCard({ className }: UpdateNameCardProps) {
     if (session?.user?.name) {
       form.setValue('name', session.user.name);
     }
-  }, [session, form]);
+  }, [session?.user?.name, form]);
+
+
 
   // Check if user exists after all hooks are initialized
   const user = session?.user;
@@ -113,6 +116,7 @@ export function UpdateNameCard({ className }: UpdateNameCardProps) {
         'w-full max-w-lg md:max-w-xl overflow-hidden pt-6 pb-0 flex flex-col',
         className
       )}
+      suppressHydrationWarning
     >
       <CardHeader>
         <CardTitle className="text-lg font-semibold">

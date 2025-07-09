@@ -13,7 +13,8 @@ import {
 } from '@/components/ui/card';
 import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
-import { uploadFileFromBrowser } from '@/storage/client';
+import { uploadAvatarToOSS, validateAvatarFile } from '@/lib/avatar-upload';
+import { useSafeSession } from '@/hooks/use-safe-session';
 import { User2Icon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -30,15 +31,18 @@ export function UpdateAvatarCard({ className }: UpdateAvatarCardProps) {
   const t = useTranslations('Dashboard.settings.profile');
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | undefined>('');
-  const { data: session, refetch } = authClient.useSession();
-  const [avatarUrl, setAvatarUrl] = useState('');
-  const [tempAvatarUrl, setTempAvatarUrl] = useState('');
+  const { session, refetch } = useSafeSession();
+  const [avatarUrl, setAvatarUrl] = useState<string>('');
+  const [tempAvatarUrl, setTempAvatarUrl] = useState<string>('');
 
+  // 设置头像 URL
   useEffect(() => {
     if (session?.user?.image) {
       setAvatarUrl(session.user.image);
     }
-  }, [session]);
+  }, [session?.user?.image]);
+
+
 
   const user = session?.user;
   if (!user) {
@@ -64,17 +68,23 @@ export function UpdateAvatarCard({ className }: UpdateAvatarCardProps) {
     setError('');
 
     try {
+      // 验证文件
+      const validation = validateAvatarFile(file);
+      if (!validation.isValid) {
+        setError(validation.error);
+        toast.error(validation.error);
+        return;
+      }
+
       // Create a temporary URL for preview and store the original URL
       const tempUrl = URL.createObjectURL(file);
       setTempAvatarUrl(tempUrl);
       // Show temporary avatar immediately for better UX
       setAvatarUrl(tempUrl);
 
-      // Upload the file to storage
-      const result = await uploadFileFromBrowser(file, 'avatars');
-      // console.log('uploadFileFromBrowser, result', result);
-      const { url } = result;
-      console.log('uploadFileFromBrowser, url', url);
+      // Upload the file to OSS using the new avatar upload function
+      const url = await uploadAvatarToOSS(file);
+      console.log('Avatar uploaded to OSS:', url);
 
       // Update the user's avatar using authClient
       await authClient.updateUser(
@@ -131,6 +141,7 @@ export function UpdateAvatarCard({ className }: UpdateAvatarCardProps) {
         'w-full max-w-lg md:max-w-xl overflow-hidden py-0 pt-6 flex flex-col',
         className
       )}
+      suppressHydrationWarning
     >
       <CardHeader>
         <CardTitle className="text-lg font-semibold">
@@ -142,7 +153,10 @@ export function UpdateAvatarCard({ className }: UpdateAvatarCardProps) {
         <div className="flex flex-col items-center sm:flex-row gap-4 sm:gap-8">
           {/* avatar */}
           <Avatar className="h-16 w-16 border">
-            <AvatarImage src={avatarUrl ?? ''} alt={user.name} />
+            <AvatarImage 
+              src={avatarUrl || session?.user?.image || ''} 
+              alt={user.name || '用户头像'} 
+            />
             <AvatarFallback>
               <User2Icon className="h-8 w-8 text-muted-foreground" />
             </AvatarFallback>
