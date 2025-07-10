@@ -284,7 +284,8 @@
       "passwordRequired": "Please enter your password",
       "accountTypeRequired": "Please select account type",
       "captchaInvalid": "Captcha verification failed",
-      "captchaError": "Captcha verification error"
+      "captchaError": "Captcha verification error",
+      "emailAlreadyVerified": "Email already registered and verified, please sign in directly"
     },
     "forgotPassword": {
       "title": "Forgot Password",

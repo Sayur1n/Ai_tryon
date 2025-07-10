@@ -41,7 +41,9 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
-    requireEmailVerification: false,
+    requireEmailVerification: true,
+    // 确保用户必须验证邮箱才能登录
+    requireEmailVerificationForSignIn: true,
     // https://www.better-auth.com/docs/authentication/email-password#forget-password
     async sendResetPassword({ user, url }, request) {
       const locale = getLocaleFromRequest(request);
@@ -64,7 +66,13 @@ export const auth = betterAuth({
     // https://www.better-auth.com/docs/authentication/email-password#require-email-verification
     sendVerificationEmail: async ({ user, url, token }, request) => {
       const locale = getLocaleFromRequest(request);
-      const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
+      
+      // 确保验证成功后跳转到仪表板
+      const dashboardUrl = `${getBaseUrl()}/${locale}/dashboard`;
+      const verificationUrl = new URL(url);
+      verificationUrl.searchParams.set('callbackURL', dashboardUrl);
+      
+      const localizedUrl = getUrlWithLocaleInCallbackUrl(verificationUrl.toString(), locale);
 
       await sendEmail({
         to: user.email,
@@ -108,6 +116,8 @@ export const auth = betterAuth({
     deleteUser: {
       enabled: true,
     },
+    // 确保用户必须验证邮箱
+    requireEmailVerification: true,
   },
   databaseHooks: {
     // https://www.better-auth.com/docs/concepts/database#database-hooks

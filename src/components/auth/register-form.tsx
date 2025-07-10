@@ -17,7 +17,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { websiteConfig } from '@/config/website';
 import { authClient } from '@/lib/auth-client';
-import { getUrlWithLocaleInCallbackUrl } from '@/lib/urls/urls';
+import { getBaseUrl, getUrlWithLocaleInCallbackUrl } from '@/lib/urls/urls';
 import { DEFAULT_LOGIN_REDIRECT, Routes } from '@/routes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { EyeIcon, EyeOffIcon, Loader2Icon } from 'lucide-react';
@@ -109,79 +109,52 @@ export const RegisterForm = ({
     // 将账号类型存储到sessionStorage，供后续使用
     sessionStorage.setItem('pendingAccountType', values.accountType);
 
-    // 使用Better Auth的标准注册流程
-    await authClient.signUp.email(
-      {
-        email: values.email,
-        password: values.password,
-        name: values.name,
-        callbackURL: callbackUrl,
-      },
-      {
-        onRequest: (ctx) => {
-          setIsPending(true);
-          setError('');
-          setSuccess('');
-        },
-        onResponse: (ctx) => {
-          setIsPending(false);
-        },
-        onSuccess: async (ctx) => {
-          // 设置用户角色（非阻塞）
-          if (ctx.data.user?.id) {
-            fetch('/api/auth/set-role', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                userId: ctx.data.user.id,
-                role: values.accountType,
-              }),
-            }).catch(error => {
-              console.error('Failed to set user role:', error);
-            });
-          }
+    setIsPending(true);
+    setError('');
+    setSuccess('');
 
-          // 注册成功后自动登录
-          try {
-            await authClient.signIn.email(
-              {
-                email: values.email,
-                password: values.password,
-                callbackURL: callbackUrl,
-              },
-              {
-                onSuccess: async (ctx) => {
-                  setSuccess('注册成功，正在跳转...');
-                  
-                  // 强制刷新会话以获取最新的用户信息
-                  try {
-                    await refetch();
-                  } catch (error) {
-                    console.error('Failed to refresh session:', error);
-                  }
-                },
-                onError: (ctx) => {
-                  setSuccess(t('checkEmail'));
-                },
-              }
-            );
-          } catch (error) {
-            setSuccess(t('checkEmail'));
-          }
+    try {
+      // 使用自定义注册API，支持未验证账户重新注册
+      const response = await fetch('/api/auth/register-with-verification', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: values.email,
+          password: values.password,
+          name: values.name,
+          accountType: values.accountType,
+          callbackURL: `${getBaseUrl()}/${locale}/dashboard`,
+        }),
+      });
 
-          // add affonso affiliate
-          if (websiteConfig.features.enableAffonsoAffiliate) {
-            window.Affonso.signup(values.email);
-          }
-        },
-        onError: (ctx) => {
-          // sign up fail, display the error message
-          setError(`${ctx.error.status}: ${ctx.error.message}`);
-        },
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log("register, success:", result);
+        setSuccess(t('checkEmail')); // 提示用户检查邮箱
+        
+        // add affonso affiliate
+        if (websiteConfig.features.enableAffonsoAffiliate) {
+          window.Affonso.signup(values.email);
+        }
+      } else {
+        console.error("register, error:", result);
+        
+        // 处理特定的错误情况
+        if (response.status === 409) {
+          setError(t('emailAlreadyVerified') || 'Email already registered and verified');
+        } else {
+          setError(result.error || 'Registration failed');
+        }
       }
-    );
+    } catch (error) {
+      console.error('Registration error:', error);
+      setError('Registration failed. Please try again.');
+    } finally {
+      setIsPending(false);
+    }
   };
 
   const togglePasswordVisibility = () => {

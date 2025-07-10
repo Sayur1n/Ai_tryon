@@ -1,2 +1,0 @@
-id,account_id,provider_id,user_id,access_token,refresh_token,id_token,access_token_expires_at,refresh_token_expires_at,scope,password,created_at,updated_at
-QZMFPacJ34vwOL0kIE1f2QYGCbFmlc1c,143185211,github,j9wJm95RoDoE4diwXGaJcuf2n4BWDyKk,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,,,,,"read:user,user:email",,2025-07-07 09:28:04.989,2025-07-07 09:28:04.989

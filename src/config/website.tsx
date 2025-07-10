@@ -70,8 +70,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'MkSaaS <support@mksaas.com>',
-    supportEmail: 'MkSaaS <support@mksaas.com>',
+    fromEmail: 'AI Tryon <onboarding@sayur1n.com>',
+    supportEmail: 'AI Tryon <onboarding@sayur1n.com>',
   },
   newsletter: {
     provider: 'resend',
