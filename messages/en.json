@@ -353,6 +353,9 @@
       "outfit": {
         "title": "Outfit"
       },
+      "outfitRoom": {
+        "title": "Outfit Room"
+      },
       "blog": {
         "title": "Blog"
       },
@@ -478,7 +481,7 @@
       }
     },
     "footer": {
-      "tagline": "Make AI SaaS in days, simply and effortlessly",
+      "tagline": "Experience revolutionary virtual try-on technology with AI Tryon",
       "product": {
         "title": "Product",
         "items": {

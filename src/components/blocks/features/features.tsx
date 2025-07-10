@@ -28,25 +28,31 @@ export default function FeaturesSection() {
   type ImageKey = 'item-1' | 'item-2' | 'item-3' | 'item-4';
   const [activeItem, setActiveItem] = useState<ImageKey>('item-1');
 
-  const images = {
+  type ImageItem = {
+    image: string;
+    darkImage: string;
+    alt: string;
+  };
+
+  const images: Record<ImageKey, ImageItem> = {
     'item-1': {
-      image: '/blocks/charts-light.png',
-      darkImage: '/blocks/charts.png',
+      image: '/Ai_tryon_images/models_1.png',
+      darkImage: '/Ai_tryon_images/models_1.png',
       alt: 'Product Feature One',
     },
     'item-2': {
-      image: '/blocks/music-light.png',
-      darkImage: '/blocks/music.png',
+      image: '/Ai_tryon_images/models_2.png',
+      darkImage: '/Ai_tryon_images/models_2.png',
       alt: 'Product Feature Two',
     },
     'item-3': {
-      image: '/blocks/mail2-light.png',
-      darkImage: '/blocks/mail2.png',
+      image: '/Ai_tryon_images/models_3.png',
+      darkImage: '/Ai_tryon_images/models_3.png',
       alt: 'Product Feature Three',
     },
     'item-4': {
-      image: '/blocks/payments-light.png',
-      darkImage: '/blocks/payments.png',
+      image: '/Ai_tryon_images/models_4.png',
+      darkImage: '/Ai_tryon_images/models_4.png',
       alt: 'Product Feature Four',
     },
   };

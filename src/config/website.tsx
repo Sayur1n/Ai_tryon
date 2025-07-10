@@ -23,7 +23,7 @@ export const websiteConfig: WebsiteConfig = {
       logoDark: '/logo-dark.png',
     },
     social: {
-      github: 'https://github.com/MkSaaSHQ',
+      github: 'https://github.com/Sayur1n/Ai_tryon',
       twitter: 'https://mksaas.link/twitter',
       blueSky: 'https://mksaas.link/bsky',
       discord: 'https://mksaas.link/discord',

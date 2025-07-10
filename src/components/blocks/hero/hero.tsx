@@ -29,7 +29,7 @@ const transitionVariants = {
 
 export default function HeroSection() {
   const t = useTranslations('HomePage.hero');
-  const linkIntroduction = 'https://x.com/mksaascom';
+  const linkIntroduction = 'https://github.com/Sayur1n/Ai_tryon';
   const linkPrimary = '/outfit_room';
   const linkSecondary = '/outfit';
 
@@ -165,14 +165,14 @@ export default function HeroSection() {
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                   <Image
                     className="bg-background relative hidden rounded-2xl dark:block"
-                    src="/blocks/music.png"
+                    src="/Ai_tryon_images/show.png"
                     alt="app screen"
                     width={2796}
                     height={2008}
                   />
                   <Image
                     className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
-                    src="/blocks/music-light.png"
+                    src="/Ai_tryon_images/show.png"
                     alt="app screen"
                     width={2796}
                     height={2008}

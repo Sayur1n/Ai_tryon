@@ -59,9 +59,16 @@ export function getNavbarLinks(): NestedMenuItem[] {
       href: Routes.Pricing,
       external: false,
     },
+    //试衣广场
     {
       title: t('outfit.title'),
-      href: '/outfit',
+      href: Routes.Outfit,
+      external: false,
+    },
+    //试衣间
+    {
+      title: t('outfitRoom.title'),
+      href: Routes.OutfitRoom,
       external: false,
     },
     // {

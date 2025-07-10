@@ -353,6 +353,9 @@
       "outfit": {
         "title": "服装广场"
       },
+      "outfitRoom": {
+        "title": "试衣间"
+      },
       "blog": {
         "title": "博客"
       },
@@ -478,7 +481,7 @@
       }
     },
     "footer": {
-      "tagline": "使用 MkSaaS 在几天内轻松构建您的 AI SaaS",
+      "tagline": "使用 AI Tryon 体验革命性的虚拟试衣技术",
       "product": {
         "title": "产品",
         "items": {

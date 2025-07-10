@@ -25,14 +25,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "knip": "knip",
     "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:build": "npm run perf:monitor",
-    "test-email-verification": "tsx scripts/test-email-verification.ts",
-    "test-email-with-env": "tsx scripts/test-email-with-env.ts",
-    "test-email-verification-flow": "tsx scripts/test-email-verification-flow.ts",
-    "test-email-verification-enforcement": "tsx scripts/test-email-verification-enforcement.ts",
-    "test-email-verification-redirect": "tsx scripts/test-email-verification-redirect.ts",
-    "test-re-registration": "tsx scripts/test-re-registration.ts",
-    "check-env": "tsx scripts/check-env.ts"
+    "perf:build": "npm run perf:monitor"
   },
   "dependencies": {
     "@ai-sdk/fal": "^0.1.12",

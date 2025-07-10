@@ -7,7 +7,7 @@ export default function BuiltWithButton() {
   return (
     <Link
       target="_blank"
-      href="https://mksaas.com?utm_source=built-with-mksaas"
+      href="https://github.com/Sayur1n/Ai_tryon"
       className={cn(
         buttonVariants({ variant: 'outline', size: 'sm' }),
         'border border-border px-4 rounded-md'
@@ -17,7 +17,7 @@ export default function BuiltWithButton() {
       <span>
         <MkSaaSLogo className="size-5 rounded-full" />
       </span>
-      <span className="font-semibold">MkSaaS</span>
+      <span className="font-semibold">AI Tryon</span>
     </Link>
   );
 }
