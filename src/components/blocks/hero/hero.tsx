@@ -29,9 +29,9 @@ const transitionVariants = {
 
 export default function HeroSection() {
   const t = useTranslations('HomePage.hero');
-  const linkIntroduction = 'https://x.com/mksaascom';
+  const linkIntroduction = 'https://linkedin.com/company/virtugoodai';
   const linkPrimary = '/#pricing';
-  const linkSecondary = 'https://demo.mksaas.com';
+  const linkSecondary = '/#contact';
 
   return (
     <>
@@ -164,16 +164,9 @@ export default function HeroSection() {
                 />
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                   <Image
-                    className="bg-background relative hidden rounded-2xl dark:block"
-                    src="/blocks/music.png"
-                    alt="app screen"
-                    width={2796}
-                    height={2008}
-                  />
-                  <Image
-                    className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
-                    src="/blocks/music-light.png"
-                    alt="app screen"
+                    className="bg-background relative rounded-2xl"
+                    src="/custom_images/front_3.png"
+                    alt="AI and Virtual Goods Platform"
                     width={2796}
                     height={2008}
                   />

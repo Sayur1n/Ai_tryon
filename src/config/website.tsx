@@ -18,18 +18,19 @@ export const websiteConfig: WebsiteConfig = {
       enableSwitch: true,
     },
     images: {
-      ogImage: '/og.png',
-      logoLight: '/logo.png',
-      logoDark: '/logo-dark.png',
+      ogImage: '/custom_images/front_3.png',
+      // 首页logo已指向public/logos/logo.png和logo-dark.png
+      logoLight: '/logos/logo.png',
+      logoDark: '/logos/logo-dark.png',
     },
     social: {
-      github: 'https://github.com/MkSaaSHQ',
-      twitter: 'https://mksaas.link/twitter',
-      blueSky: 'https://mksaas.link/bsky',
-      discord: 'https://mksaas.link/discord',
-      mastodon: 'https://mksaas.link/mastodon',
-      linkedin: 'https://mksaas.link/linkedin',
-      youtube: 'https://mksaas.link/youtube',
+      github: 'https://github.com/Sayur1n/Ai_tryon',
+      twitter: 'https://twitter.com/virtugoodai',
+      blueSky: 'https://bsky.app/profile/virtugoodai.bsky.social',
+      discord: 'https://discord.gg/virtugoodai',
+      mastodon: 'https://mastodon.social/@virtugoodai',
+      linkedin: 'https://linkedin.com/company/virtugoodai',
+      youtube: 'https://youtube.com/@virtugoodai',
     },
   },
   features: {
@@ -70,8 +71,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'MkSaaS <support@mksaas.com>',
-    supportEmail: 'MkSaaS <support@mksaas.com>',
+    fromEmail: 'VirtuGood AI <support@virtugoodai.com>',
+    supportEmail: 'VirtuGood AI <support@virtugoodai.com>',
   },
   newsletter: {
     provider: 'resend',
@@ -97,14 +98,14 @@ export const websiteConfig: WebsiteConfig = {
           {
             type: PaymentTypes.SUBSCRIPTION,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY!,
-            amount: 990,
+            amount: 2990,
             currency: 'USD',
             interval: PlanIntervals.MONTH,
           },
           {
             type: PaymentTypes.SUBSCRIPTION,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_YEARLY!,
-            amount: 9900,
+            amount: 29900,
             currency: 'USD',
             interval: PlanIntervals.YEAR,
           },
@@ -119,7 +120,7 @@ export const websiteConfig: WebsiteConfig = {
           {
             type: PaymentTypes.ONE_TIME,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_LIFETIME!,
-            amount: 19900,
+            amount: 49900,
             currency: 'USD',
             allowPromotionCode: true,
           },

@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
-    "title": "MkSaaS - The Best AI SaaS Boilerplate",
-    "description": "MkSaaS is the best AI SaaS boilerplate. Make AI SaaS in days, simply and effortlessly"
+    "name": "VirtuGood AI Inc",
+    "title": "VirtuGood AI Inc - Leading Virtual Goods & AI Solutions",
+    "description": "VirtuGood AI Inc is a U.S.-based company specializing in downloadable virtual goods and AI solutions that help firms automate work."
   },
   "Common": {
     "login": "Log in",
@@ -56,45 +56,45 @@
   },
   "PricePlans": {
     "free": {
-      "name": "Free",
-      "description": "Basic features for personal use",
+      "name": "Starter",
+      "description": "Perfect for small businesses getting started",
       "features": {
-        "feature-1": "Up to 3 projects",
-        "feature-2": "1 GB storage",
-        "feature-3": "Basic analytics",
-        "feature-4": "Community support"
+        "feature-1": "Basic AI automation tools",
+        "feature-2": "Access to digital asset library",
+        "feature-3": "Standard support",
+        "feature-4": "Basic analytics dashboard"
       },
       "limits": {
-        "limit-1": "Custom domains",
-        "limit-2": "Custom branding",
-        "limit-3": "Lifetime updates"
+        "limit-1": "Advanced AI features",
+        "limit-2": "Custom AI development",
+        "limit-3": "Priority support"
       }
     },
     "pro": {
-      "name": "Pro",
-      "description": "Advanced features for professionals",
+      "name": "Professional",
+      "description": "Advanced solutions for growing businesses",
       "features": {
-        "feature-1": "Unlimited projects",
-        "feature-2": "10 GB storage",
-        "feature-3": "Advanced analytics",
-        "feature-4": "Priority support",
-        "feature-5": "Custom domains"
+        "feature-1": "Full AI automation suite",
+        "feature-2": "Premium digital assets",
+        "feature-3": "Priority support",
+        "feature-4": "Advanced analytics",
+        "feature-5": "Custom integrations"
       },
       "limits": {
-        "limit-1": "Custom branding",
-        "limit-2": "Lifetime updates"
+        "limit-1": "Enterprise security",
+        "limit-2": "Dedicated account manager"
       }
     },
     "lifetime": {
-      "name": "Lifetime",
-      "description": "Premium features with one-time payment",
+      "name": "Enterprise",
+      "description": "Complete solution for large organizations",
       "features": {
-        "feature-1": "All Pro features",
-        "feature-2": "100 GB storage",
-        "feature-3": "Dedicated support",
+        "feature-1": "All Professional features",
+        "feature-2": "Custom AI development",
+        "feature-3": "Dedicated support team",
         "feature-4": "Enterprise-grade security",
         "feature-5": "Advanced integrations",
-        "feature-6": "Custom branding",
+        "feature-6": "White-label solutions",
         "feature-7": "Lifetime updates"
       }
     }
@@ -111,12 +111,12 @@
   },
   "AboutPage": {
     "title": "About",
-    "description": "This is MkSaaS, an AI SaaS template built with modern technologies, helping you build your SaaS faster and better.",
-    "authorName": "MkSaaS",
-    "authorBio": "AI SaaS Boilerplate",
-    "introduction": "👋 Hi there! This is MkSaaS, an AI SaaS template built with modern technologies, helping you build your SaaS faster and better. If you have any questions, welcome to contact me.",
-    "talkWithMe": "Talk with me",
-    "followMe": "Follow me on X"
+    "description": "VirtuGood AI Inc is a U.S.-based company specializing in downloadable virtual goods and AI solutions that help firms automate work.",
+    "authorName": "VirtuGood AI Inc",
+    "authorBio": "Virtual Goods & AI Solutions Provider",
+    "introduction": "👋 Welcome to VirtuGood AI Inc! We are a U.S.-based company dedicated to selling downloadable virtual goods (software tools, digital assets) and building AI solutions that help other firms automate work. Our mission is to empower businesses with cutting-edge technology solutions.",
+    "talkWithMe": "Contact Us",
+    "followMe": "Follow us on LinkedIn"
   },
   "ChangelogPage": {
     "title": "Changelog",
@@ -125,11 +125,11 @@
   },
   "ContactPage": {
     "title": "Contact",
-    "description": "We'll help you find the right plan for your business",
-    "subtitle": "We'll help you find the right plan for your business",
-    "form": {
-      "title": "Contact Us",
-      "description": "If you have any questions or feedback, please reach out to our team",
+    "description": "Get in touch with our team to discuss your AI and virtual goods needs",
+    "subtitle": "Ready to transform your business with AI solutions?",
+          "form": {
+        "title": "Contact VirtuGood AI",
+        "description": "Ready to explore how our AI solutions and virtual goods can transform your business? Get in touch with our expert team.",
       "name": "Name",
       "email": "Email",
       "message": "Message",
@@ -145,12 +145,12 @@
     }
   },
   "WaitlistPage": {
-    "title": "Waitlist",
-    "description": "Join our waitlist for the launch of our product",
-    "subtitle": "Join our waitlist for the launch of our product",
-    "form": {
-      "title": "Join Our Waitlist",
-      "description": "We will notify you when we launch our product",
+    "title": "Early Access",
+    "description": "Be among the first to access our latest AI solutions and virtual goods",
+    "subtitle": "Join our exclusive early access program",
+          "form": {
+        "title": "Join Early Access",
+        "description": "Get exclusive access to our latest AI solutions and virtual goods before public release",
       "email": "Email",
       "subscribe": "Subscribe",
       "subscribing": "Subscribing...",
@@ -160,9 +160,9 @@
     }
   },
   "Newsletter": {
-    "title": "Newsletter",
-    "subtitle": "Join the community",
-    "description": "Subscribe to our newsletter for the latest news and updates",
+    "title": "Stay Updated",
+    "subtitle": "Join our community",
+    "description": "Subscribe to our newsletter for the latest AI innovations and virtual goods updates",
     "form": {
       "email": "Email",
       "subscribe": "Subscribe",
@@ -394,11 +394,11 @@
       }
     },
     "footer": {
-      "tagline": "Make AI SaaS in days, simply and effortlessly",
+      "tagline": "Empowering businesses with virtual goods and AI solutions",
       "product": {
-        "title": "Product",
+        "title": "Solutions",
         "items": {
-          "features": "Features",
+          "features": "AI Solutions",
           "pricing": "Pricing",
           "faq": "FAQ"
         }
@@ -646,249 +646,249 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
+    "title": "VirtuGood AI Inc",
+    "description": "Leading Virtual Goods & AI Solutions Provider",
     "hero": {
-      "title": "Make AI SaaS in days, simply and effortlessly",
-      "description": "The is a demo website built with MkSaaS, a Next.js SaaS boilerplate to help you build your AI SaaS faster and better.",
-      "introduction": "Introducing MkSaaS Boilerplate",
-      "primary": "Get Started",
-      "secondary": "See Demo"
+      "title": "Empowering Businesses with Virtual Goods & AI Solutions",
+      "description": "VirtuGood AI Inc is a U.S.-based company specializing in downloadable virtual goods and AI solutions that help firms automate work and boost productivity.",
+      "introduction": "Introducing VirtuGood AI Inc",
+      "primary": "Explore Solutions",
+      "secondary": "Learn More"
     },
     "logocloud": {
-      "title": "Your favorite companies are our partners"
+      "title": "Trusted by Leading Companies Worldwide"
     },
     "integration": {
-      "title": "Integrations",
-      "subtitle": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
+      "title": "Our Solutions",
+      "subtitle": "Comprehensive AI & Virtual Goods Platform",
+      "description": "Discover our range of downloadable virtual goods and AI solutions designed to transform your business operations.",
       "learnMore": "Learn More",
       "items": {
         "item-1": {
-          "title": "Google Gemini",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "AI Automation Tools",
+          "description": "Advanced AI solutions that streamline workflows and automate repetitive tasks for maximum efficiency."
         },
         "item-2": {
-          "title": "Replit",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Digital Asset Marketplace",
+          "description": "Premium downloadable software tools and digital assets to enhance your creative and business projects."
         },
         "item-3": {
-          "title": "MagicUI",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Enterprise AI Solutions",
+          "description": "Custom AI implementations tailored to your specific business needs and industry requirements."
         },
         "item-4": {
-          "title": "VSCodium",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Virtual Goods Platform",
+          "description": "Secure and scalable platform for selling and distributing virtual goods to customers worldwide."
         },
         "item-5": {
-          "title": "MediaWiki",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "AI Consulting Services",
+          "description": "Expert guidance on implementing AI solutions and optimizing your business processes."
         },
         "item-6": {
-          "title": "Google PaLM",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+          "title": "Cloud-Based AI Services",
+          "description": "Scalable cloud infrastructure for deploying and managing AI applications with ease."
         }
       }
     },
     "integration2": {
-      "title": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
+      "title": "Transform Your Business with AI",
+      "description": "Leverage our cutting-edge AI solutions and virtual goods to streamline operations and drive growth.",
       "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
+      "secondaryButton": "View Solutions"
     },
     "features": {
-      "title": "Features",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "title": "Core Capabilities",
+      "subtitle": "What Sets VirtuGood AI Apart",
+      "description": "Our comprehensive suite of AI solutions and virtual goods platform delivers unmatched value to businesses worldwide.",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here, make it as detailed as possible, make it more attractive to users"
+          "title": "Advanced AI Automation",
+          "description": "State-of-the-art AI algorithms that automate complex business processes, reducing manual work by up to 80% while maintaining accuracy and reliability."
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here, make it as detailed as possible, make it more attractive to users"
+          "title": "Premium Virtual Goods Marketplace",
+          "description": "Curated collection of high-quality downloadable software tools, digital assets, and creative resources for professionals and businesses."
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here, make it as detailed as possible, make it more attractive to users"
+          "title": "Enterprise-Grade Security",
+          "description": "Bank-level security protocols and compliance standards ensure your data and transactions are protected at every level."
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here, make it as detailed as possible, make it more attractive to users"
+          "title": "Scalable Cloud Infrastructure",
+          "description": "Built on robust cloud architecture that scales seamlessly with your business growth, ensuring optimal performance and reliability."
         }
       }
     },
     "features2": {
-      "title": "Features2",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
-      "feature-1": "Product Feature One",
-      "feature-2": "Product Feature Two",
-      "feature-3": "Product Feature Three",
-      "feature-4": "Product Feature Four"
+      "title": "Technology Excellence",
+      "subtitle": "Cutting-Edge AI & Digital Solutions",
+      "description": "Leveraging the latest advancements in artificial intelligence and digital technology to deliver exceptional results.",
+      "feature-1": "Machine Learning Algorithms",
+      "feature-2": "Natural Language Processing",
+      "feature-3": "Computer Vision Solutions",
+      "feature-4": "Predictive Analytics"
     },
     "features3": {
-      "title": "Features3",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "title": "Business Solutions",
+      "subtitle": "Comprehensive AI & Virtual Goods Services",
+      "description": "From automation to digital assets, we provide end-to-end solutions that drive business transformation and growth.",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here"
+          "title": "Process Automation",
+          "description": "Streamline workflows and eliminate manual tasks with intelligent automation solutions tailored to your industry."
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here"
+          "title": "Digital Asset Management",
+          "description": "Comprehensive platform for creating, managing, and distributing digital assets with advanced security and analytics."
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here"
+          "title": "AI-Powered Analytics",
+          "description": "Transform raw data into actionable insights with our advanced analytics and reporting capabilities."
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here"
+          "title": "Custom AI Development",
+          "description": "Bespoke AI solutions designed specifically for your business requirements and operational challenges."
         },
         "item-5": {
-          "title": "Product Feature Five",
-          "description": "Please write the detailed description of feature five here"
+          "title": "Virtual Goods Distribution",
+          "description": "Secure and efficient platform for selling and delivering virtual goods to customers worldwide."
         },
         "item-6": {
-          "title": "Product Feature Six",
-          "description": "Please write the detailed description of feature six here"
+          "title": "24/7 Support & Maintenance",
+          "description": "Round-the-clock technical support and maintenance services to ensure your solutions run smoothly."
         }
       }
     },
     "pricing": {
-      "title": "Pricing",
-      "subtitle": "Pricing",
-      "description": "Choose the plan that works best for you"
+      "title": "Pricing Plans",
+      "subtitle": "Flexible Solutions for Every Business",
+      "description": "Choose the perfect plan that aligns with your business needs and growth objectives"
     },
     "faqs": {
       "title": "FAQ",
       "subtitle": "Frequently Asked Questions",
       "items": {
         "item-1": {
-          "question": "Do you offer a free trial?",
-          "answer": "Yes, we offer a 7-day free trial."
+          "question": "What types of virtual goods do you offer?",
+          "answer": "We offer a wide range of downloadable software tools, digital assets, templates, and creative resources designed for professionals and businesses."
         },
         "item-2": {
-          "question": "How do I cancel my subscription?",
-          "answer": "You can cancel your subscription by visiting the billing page."
+          "question": "How do your AI solutions help automate work?",
+          "answer": "Our AI solutions use advanced machine learning algorithms to automate repetitive tasks, process data, and optimize workflows, reducing manual work by up to 80%."
         },
         "item-3": {
-          "question": "Can I change my plan?",
-          "answer": "Yes, you can change your plan at any time by visiting the billing page."
+          "question": "Do you provide custom AI development services?",
+          "answer": "Yes, we offer bespoke AI development services tailored to your specific business requirements and industry needs."
         },
         "item-4": {
-          "question": "What is the refund policy?",
-          "answer": "We offer a 30-day money-back guarantee if you are not happy with our product."
+          "question": "What security measures do you have in place?",
+          "answer": "We implement enterprise-grade security protocols including encryption, secure payment processing, and compliance with industry standards."
         },
         "item-5": {
           "question": "Can't find what you're looking for?",
-          "answer": "Please contact our customer support team at support@mksaas.com"
+          "answer": "Please contact our customer support team at support@virtugoodai.com for personalized assistance."
         }
       }
     },
     "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "What our customers are saying",
+      "title": "Client Success Stories",
+      "subtitle": "What our clients are saying",
       "items": {
         "item-1": {
-          "name": "Jonathan Yombo",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/1.jpg",
-          "quote": "MkSaaS is really extraordinary and very practical, no need to break your head. A real gold mine."
+          "name": "Sarah Johnson",
+          "role": "CTO, TechCorp Inc",
+          "image": "https://randomuser.me/api/portraits/women/1.jpg",
+          "quote": "VirtuGood AI's automation solutions have transformed our operations, reducing processing time by 75% and significantly improving accuracy."
         },
         "item-2": {
-          "name": "Yves Kalume",
-          "role": "GDE - Android",
+          "name": "Michael Chen",
+          "role": "Digital Asset Manager",
           "image": "https://randomuser.me/api/portraits/men/6.jpg",
-          "quote": "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to MkSaaS."
+          "quote": "The virtual goods marketplace has been a game-changer for our creative team. High-quality assets and seamless delivery every time."
         },
         "item-3": {
-          "name": "Yucel Faruksahan",
-          "role": "Tailkits Creator",
-          "image": "https://randomuser.me/api/portraits/men/7.jpg",
-          "quote": "Great work on MkSaaS template. This is one of the best personal website that I have seen so far :)"
+          "name": "Emily Rodriguez",
+          "role": "Operations Director",
+          "image": "https://randomuser.me/api/portraits/women/7.jpg",
+          "quote": "Their AI solutions are incredibly sophisticated yet easy to implement. The ROI we've seen in just 6 months is remarkable."
         },
         "item-4": {
-          "name": "Anonymous author",
-          "role": "Product Manager",
+          "name": "David Thompson",
+          "role": "VP of Technology",
           "image": "https://randomuser.me/api/portraits/men/8.jpg",
-          "quote": "I downloaded the one of MkSaaS template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page."
+          "quote": "VirtuGood AI's enterprise-grade security and scalable infrastructure give us confidence to handle our growing business needs."
         },
         "item-5": {
-          "name": "Shekinah Tshiokufila",
-          "role": "Senior Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/4.jpg",
-          "quote": "MkSaaS is redefining the standard of web design, with these blocks it provides an easy and efficient way for those who love beauty but may lack the time to implement it."
+          "name": "Lisa Wang",
+          "role": "Product Manager",
+          "image": "https://randomuser.me/api/portraits/women/4.jpg",
+          "quote": "The custom AI development services exceeded our expectations. They truly understand our industry challenges and deliver tailored solutions."
         },
         "item-6": {
-          "name": "Oketa Fred",
-          "role": "Fullstack Developer",
+          "name": "James Wilson",
+          "role": "CEO, StartupXYZ",
           "image": "https://randomuser.me/api/portraits/men/2.jpg",
-          "quote": "I absolutely love MkSaaS! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze."
+          "quote": "VirtuGood AI has been instrumental in our growth. Their virtual goods platform and AI tools have given us a competitive edge."
         },
         "item-7": {
-          "name": "Zeki",
-          "role": "Founder of ChatExtend",
-          "image": "https://randomuser.me/api/portraits/men/5.jpg",
-          "quote": "MkSaaS is the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly."
+          "name": "Alexandra Kim",
+          "role": "Data Scientist",
+          "image": "https://randomuser.me/api/portraits/women/5.jpg",
+          "quote": "The AI-powered analytics have revolutionized how we make decisions. The insights are actionable and the platform is incredibly user-friendly."
         },
         "item-8": {
-          "name": "Joseph Kitheka",
-          "role": "Fullstack Developer",
+          "name": "Robert Martinez",
+          "role": "IT Director",
           "image": "https://randomuser.me/api/portraits/men/9.jpg",
-          "quote": "MkSaaS has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow."
+          "quote": "Implementation was smooth and the support team is exceptional. VirtuGood AI has become an integral part of our technology stack."
         },
         "item-9": {
-          "name": "Khatab Wedaa",
-          "role": "MerakiUI Creator",
-          "image": "https://randomuser.me/api/portraits/men/10.jpg",
-          "quote": "MkSaaS is an elegant, clean, and responsive tailwind css components it's very helpful to start fast with your project."
+          "name": "Jennifer Lee",
+          "role": "Creative Director",
+          "image": "https://randomuser.me/api/portraits/women/10.jpg",
+          "quote": "The quality of digital assets and the ease of integration have made our creative workflow much more efficient and productive."
         },
         "item-10": {
-          "name": "Rodrigo Aguilar",
-          "role": "TailwindAwesome Creator",
+          "name": "Christopher Brown",
+          "role": "VP of Operations",
           "image": "https://randomuser.me/api/portraits/men/11.jpg",
-          "quote": "I love MkSaaS ❤️. The component blocks are well-structured, simple to use, and beautifully designed. It makes it really easy to have a good-looking website in no time."
+          "quote": "VirtuGood AI's solutions have streamlined our entire operation. The automation capabilities are truly impressive and reliable."
         },
         "item-11": {
-          "name": "Eric Ampire",
-          "role": "@GoogleDevExpert for Android",
-          "image": "https://randomuser.me/api/portraits/men/12.jpg",
-          "quote": "MkSaaS templates are the perfect solution for anyone who wants to create a beautiful and functional website without any web design experience."
+          "name": "Maria Garcia",
+          "role": "Business Analyst",
+          "image": "https://randomuser.me/api/portraits/women/12.jpg",
+          "quote": "The predictive analytics and reporting features have given us unprecedented visibility into our business performance."
         },
         "item-12": {
-          "name": "Roland Tubonge",
-          "role": "Software Engineer",
+          "name": "Daniel Park",
+          "role": "Technology Consultant",
           "image": "https://randomuser.me/api/portraits/men/13.jpg",
-          "quote": "MkSaaS is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!"
+          "quote": "VirtuGood AI consistently delivers innovative solutions that drive real business value. Their expertise in AI is unmatched."
         }
       }
     },
     "stats": {
-      "title": "Stats",
-      "subtitle": "MkSaaS in numbers",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+      "title": "Company Impact",
+      "subtitle": "VirtuGood AI by the Numbers",
+      "description": "Our solutions have transformed businesses across industries, delivering measurable results and driving growth.",
       "items": {
         "item-1": {
-          "title": "Stars on GitHub"
+          "title": "Global Clients"
         },
         "item-2": {
-          "title": "Active Users"
+          "title": "AI Solutions Deployed"
         },
         "item-3": {
-          "title": "Powered Apps"
+          "title": "Virtual Goods Sold"
         }
       }
     },
     "calltoaction": {
-      "title": "Start Building",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+      "title": "Transform Your Business Today",
+      "description": "Join hundreds of companies already leveraging VirtuGood AI's solutions to automate work and drive growth",
       "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
+      "secondaryButton": "Contact Sales"
     }
   },
   "AITextPage": {

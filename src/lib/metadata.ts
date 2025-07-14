@@ -48,9 +48,9 @@ export function constructMetadata({
       site: getBaseUrl(),
     },
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon-32x32.png',
-      apple: '/apple-touch-icon.png',
+      icon: '/logos/favicon_io/favicon.ico',
+      shortcut: '/logos/favicon_io/favicon-32x32.png',
+      apple: '/logos/favicon_io/apple-touch-icon.png',
     },
     metadataBase: new URL(getBaseUrl()),
     manifest: `${getBaseUrl()}/manifest.webmanifest`,

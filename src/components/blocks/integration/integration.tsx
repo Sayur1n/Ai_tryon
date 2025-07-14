@@ -1,16 +1,8 @@
 import { HeaderSection } from '@/components/layout/header-section';
-import {
-  Gemini,
-  GooglePaLM,
-  MagicUI,
-  MediaWiki,
-  Replit,
-  VSCodium,
-} from '@/components/tailark/logos';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { LocaleLink } from '@/i18n/navigation';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Brain, Database, Cloud, Shield, Zap, Globe } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type * as React from 'react';
 
@@ -33,42 +25,42 @@ export default function IntegrationSection() {
             title={t('items.item-1.title')}
             description={t('items.item-1.description')}
           >
-            <Gemini />
+            <Brain className="size-10 text-blue-600" />
           </IntegrationCard>
 
           <IntegrationCard
             title={t('items.item-2.title')}
             description={t('items.item-2.description')}
           >
-            <Replit />
+            <Database className="size-10 text-green-600" />
           </IntegrationCard>
 
           <IntegrationCard
             title={t('items.item-3.title')}
             description={t('items.item-3.description')}
           >
-            <MagicUI />
+            <Cloud className="size-10 text-purple-600" />
           </IntegrationCard>
 
           <IntegrationCard
             title={t('items.item-4.title')}
             description={t('items.item-4.description')}
           >
-            <VSCodium />
+            <Shield className="size-10 text-red-600" />
           </IntegrationCard>
 
           <IntegrationCard
             title={t('items.item-5.title')}
             description={t('items.item-5.description')}
           >
-            <MediaWiki />
+            <Zap className="size-10 text-yellow-600" />
           </IntegrationCard>
 
           <IntegrationCard
             title={t('items.item-6.title')}
             description={t('items.item-6.description')}
           >
-            <GooglePaLM />
+            <Globe className="size-10 text-indigo-600" />
           </IntegrationCard>
         </div>
       </div>
@@ -90,11 +82,11 @@ const IntegrationCard = ({
   const t = useTranslations('HomePage.integration');
 
   return (
-    <Card className="p-6 hover:bg-accent dark:hover:bg-accent">
+    <Card className="p-6 hover:bg-accent dark:hover:bg-accent transition-all duration-300 hover:shadow-lg">
       <div className="relative">
-        <div className="*:size-10">{children}</div>
+        <div className="flex items-center justify-center mb-4">{children}</div>
 
-        <div className="space-y-2 py-6">
+        <div className="space-y-2 py-4">
           <h3 className="text-base font-medium">{title}</h3>
           <p className="text-muted-foreground line-clamp-2 text-sm">
             {description}

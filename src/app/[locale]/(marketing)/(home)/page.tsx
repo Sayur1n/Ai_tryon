@@ -50,8 +50,6 @@ export default async function HomePage(props: HomePageProps) {
       <div className="flex flex-col">
         <HeroSection />
 
-        <LogoCloud />
-
         <StatsSection />
 
         <IntegrationSection />
@@ -62,17 +60,9 @@ export default async function HomePage(props: HomePageProps) {
 
         <Features3Section />
 
-        <Integration2Section />
-
-        <PricingSection />
+        {/* <PricingSection /> 已删除定价模块 */}
 
         <FaqSection />
-
-        <CallToActionSection />
-
-        <TestimonialsSection />
-
-        <NewsletterCard />
       </div>
     </>
   );
